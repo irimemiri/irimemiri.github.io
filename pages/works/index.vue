@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h2>Works</h2>
     <div v-for="n in works" :key="n.slug">
       <nuxt-link :to="'/works/'+ n.slug">{{n.title}} {{n.date}}</nuxt-link>
     </div>
