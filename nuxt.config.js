@@ -45,7 +45,16 @@ export default {
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+    markdown: {
+      // @nuxt/contentはremarkというプラグインでマークダウンを解析しているためそのエコシステムを指定できる
+      // 参考：https://www.suzu6.net/posts/265-nuxt-content-remark/
+      remarkPlugins: [
+        'remark-prism',
+        'remark-emoji'
+      ]
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

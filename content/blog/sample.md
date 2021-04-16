@@ -8,3 +8,7 @@ image: '/images/piyo.png'
 ## 見出し
 
 お試しページ
+
+```js
+console.log('hogehoge');
+```
