@@ -14,16 +14,22 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      // TODO: CDNじゃなくてローカルでビルドするようにする
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.6.1/css/all.css' }
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/css/reset.css',
+    'swiper/css/swiper.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~plugins/vue-awesome-swiper.js',
+    '~plugins/scroll.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <div id="wrapper">
     <Header />
     <Nuxt />
+    <Footer />
   </div>
 </template>
 
@@ -31,5 +32,20 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
+
+::selection {
+  background: #bbc8e6;
+  color: #fff;
+}
+
+/* #wrapper {
+  width: 76.562%; 980/1280 
+  max-width: 980px;
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
 </style>
