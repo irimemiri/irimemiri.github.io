@@ -35,6 +35,7 @@ export default {
     line-height: 2;
     padding-top: 55px;
     padding-bottom: 55px;
+    background-color: #fff;
   }
 
   .blog_post .post_eyecatch img {

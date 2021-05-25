@@ -2,7 +2,7 @@
 title: Webポートフォリオ ver.1.0「behind」
 date: 2021-02-01
 tags: [design]
-image: '/images/works/behind_top.jpg'
+image: '/images/works/behind_sum.jpg'
 ---
 
 過去に制作したポートフォリオサイトです。

@@ -1,6 +1,7 @@
 <template>
   <header>
     <!-- ハンバーガーメニューのアイコン -->
+    <div id="hamburger-bg"></div>
     <div id="hamburger" @click="activeMenu=!activeMenu">
       <span class="inner_line" id="line1" :class="{open:activeMenu}"></span>
       <span class="inner_line" id="line2" :class="{open:activeMenu}"></span>
@@ -16,6 +17,7 @@
         <li><nuxt-link to="/blog" @click.native="activeMenu=false">ブログ(準備中)</nuxt-link></li>
       </ul>
     </nav>
+    <div id="nav_bg" :class="{active:activeMenu}" @click="activeMenu=false"></div>
   </header>
 </template>
 
@@ -38,6 +40,19 @@ header {
   height: 24px;
   cursor: pointer;
   transition: 1s;
+}
+
+#hamburger-bg {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 0;
+  height: 0;
+  border: solid 60px;
+  border-width: 55px 60px;
+  border-color: #003557 #003557 transparent transparent;
 }
 
 .inner_line {
@@ -122,13 +137,26 @@ header {
   transition: .5s;
 }
 
-#g_nav li a:hover{
-  /* color: #ffffff;
-  background: #cd5c5c;
-  border-bottom: none; */
+#nav_bg {
+  background-color: rgba(0,0,0,.6);
+  display: block;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: all 0.3s linear 0s;
+  width: 100%;
+  z-index: -1;
 }
 
+#nav_bg.active {
+  opacity: 1;
+  pointer-events: auto;
+}
 </style>
+
 <script>
 export default {
   data() {

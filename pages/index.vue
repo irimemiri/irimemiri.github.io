@@ -2,10 +2,10 @@
   <div class="container">
     <div class="key-back">
       <img src="/images/key_top.jpg">
-      <p class="catch">
+      <!-- <p class="catch">
         <span>どんなにいいサービスも、</span>
         <span>知ってもらわなきゃ届かない。</span>
-      </p>
+      </p> -->
     </div>
     <div>
       <section class="about-sect">
@@ -77,7 +77,7 @@
           <h2 class="sect-header">お問い合わせ</h2>
           <div class="contact-gr">
             <p class="contact-dsc">ご質問や本サイトへのご意見・ご感想などお待ちしております。</p>
-            <a href="https://forms.gle/KSYc1iwvHBYrxwnd9" class="contact-link">お問い合わせ</a>
+            <a href="https://forms.gle/KSYc1iwvHBYrxwnd9" class="contact-link"><i class="far fa-envelope"></i>&nbsp;お問い合わせ</a>
           </div>
         </section>
       </div>
