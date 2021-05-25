@@ -5,10 +5,10 @@
       <div class="card-description">
         <h2 class="title">{{ title }}</h2>
         <time class="date" :datetime="date">{{ date | moment('YYYY.MM.DD') }}</time>
-        <div class="category">
+        <!-- <div class="category">
           <span v-if="category">{{ category }}</span>
           <span v-else>未分類</span>
-        </div>
+        </div> -->
       </div>
     </nuxt-link>
   </article>

@@ -31,8 +31,6 @@ export default {
     margin-left: auto;
     margin-right: auto;
     line-height: 2;
-    /* padding-top: 55px; */
-    /* FIXME: ここmarginにしたいけどそうするとヘッダーのメニュー位置がなんかおかしくなる */
     margin-top: 55px;
     padding-bottom: 55px;
     background-color: #fff;

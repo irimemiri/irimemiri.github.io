@@ -2,6 +2,7 @@
   <div class="container">
     <div class="key-back">
       <img src="/images/key_top.jpg">
+      <h1 class="site-title"><span>irimemiri's web portfolio</span></h1>
       <!-- <p class="catch">
         <span>どんなにいいサービスも、</span>
         <span>知ってもらわなきゃ届かない。</span>
@@ -111,6 +112,15 @@ img {
   border-width: 200px 0 0 100vw ;
   border-color: #003557 transparent transparent transparent;
   z-index: 1;
+}
+
+.site-title {
+  position: absolute;
+  width: 600px;
+  z-index: 100;
+  top: 600px;
+  right: 20px;
+  color: #fff;
 }
 
 .key-back .catch {

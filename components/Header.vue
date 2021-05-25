@@ -1,20 +1,18 @@
 <template>
   <header>
-    <!-- ハンバーガーメニューのアイコン -->
     <div id="hamburger-bg"></div>
     <div id="hamburger" @click="activeMenu=!activeMenu">
       <span class="inner_line" id="line1" :class="{open:activeMenu}"></span>
       <span class="inner_line" id="line2" :class="{open:activeMenu}"></span>
       <span class="inner_line" id="line3" :class="{open:activeMenu}"></span>
     </div>
-    <!-- <div class="logo"><nuxt-link to="/">Home</nuxt-link></div> -->
 
     <nav id="g_nav" :class="{open: activeMenu}">
       <ul>
         <li><nuxt-link to="/" @click.native="activeMenu=false">HOME</nuxt-link></li>
         <li><nuxt-link to="/works" @click.native="activeMenu=false">制作実績</nuxt-link></li>
         <li><nuxt-link to="/about" @click.native="activeMenu=false">私について</nuxt-link></li>
-        <li><nuxt-link to="/blog" @click.native="activeMenu=false">ブログ(準備中)</nuxt-link></li>
+        <li><nuxt-link to="/blog" @click.native="activeMenu=false">ブログ</nuxt-link></li>
       </ul>
     </nav>
     <div id="nav_bg" :class="{active:activeMenu}" @click="activeMenu=false"></div>
@@ -23,9 +21,8 @@
 
 <style>
 header {
-  /* display: flex;
-  margin-bottom: 20px; */
   position: fixed;
+  top: 0;
   z-index: 1000;
   width: 100%;
   background: #000;
