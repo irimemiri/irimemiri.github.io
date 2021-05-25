@@ -66,8 +66,8 @@ export default {
   build: {
   },
 
-  // github pagesでデプロイするために追加
-  router: {
-    base: '/irimemiri.github.io/'
-  }
+  // // github pagesでデプロイするために追加
+  // router: {
+  //   base: '/irimemiri.github.io/'
+  // }
 }
