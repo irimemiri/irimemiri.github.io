@@ -29,6 +29,9 @@ export default {
 
 <style>
   .blog_post {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
     line-height: 2;
     padding-top: 55px;
     padding-bottom: 55px;

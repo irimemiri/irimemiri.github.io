@@ -123,9 +123,9 @@ header {
 }
 
 #g_nav li a:hover{
-  color: #ffffff;
+  /* color: #ffffff;
   background: #cd5c5c;
-  border-bottom: none;
+  border-bottom: none; */
 }
 
 </style>

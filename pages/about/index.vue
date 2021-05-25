@@ -1,33 +1,58 @@
 <template>
   <div class="profile-wrapper">
     <h1 class="page-title">私について</h1>
-    <p class="prof_img"><img :src="`/images/prof.jpg`"></p>
-    <div class="bio">
-      <h2 class="name"><a href="https://github.com/irimemiri">@irimemiri</a></h2>
-      <p>絵と音楽とSplatoonが好きな圧倒的インドア派。英語と韓国語が少しわかります。</p>
-      <p>サークル活動がきっかけで広告に興味を持ち、大学卒業後は広告系の会社で社内SE、Webエンジニアとして勤務。2021年、エンジニアを辞めて、デザインを学び始めました。</p>
-    </div>
-    <h3 class="skills">Experience</h3>
-    <dl class="skill_list">
-      <div class="skill_item">
-        <dt>Backend</dt>
-        <dd>
-          Ruby/Ruby on Rails/PHP/CodeIgniter/Node.js
-        </dd>
+    <section>
+      <h2>プロフィール</h2>
+      irimemiri
+      1995年生まれ。
+    </section>
+    <section>
+      <h2>バックグラウンド</h2>
+      <div>
+        2017年
+        大学の英文学科を卒業
       </div>
-      <div class="skill_item">
-        <dt>Frontend</dt>
-        <dd>
-          HTML5/CSS3/JavaScript/vue.js/jQuery
-        </dd>
+        ダイレクトメール発送代行会社の社内SE
+      <div>
+        デジタル広告代理店のエンジニア
       </div>
-      <div class="skill_item">
-        <dt>Design Tools</dt>
-        <dd>
-          Sketch/Illustrator/Photoshop
-        </dd>
+      <div>
+        職業訓練校でデザインを学ぶ
       </div>
-    </dl>
+      <div>
+        デザイナーを目指して勉強中
+      </div>
+    </section>
+    <section>
+      <h2>スキルセット</h2>
+      <!-- <p class="prof_img"><img :src="`/images/prof.jpg`"></p>
+      <div class="bio">
+        <h2 class="name"><a href="https://github.com/irimemiri">@irimemiri</a></h2>
+        <p>絵と音楽とSplatoonが好きな圧倒的インドア派。英語と韓国語が少しわかります。</p>
+        <p>サークル活動がきっかけで広告に興味を持ち、大学卒業後は広告系の会社で社内SE、Webエンジニアとして勤務。2021年、エンジニアを辞めて、デザインを学び始めました。</p>
+      </div> -->
+      <h3 class="skills">Experience</h3>
+      <dl class="skill_list">
+        <div class="skill_item">
+          <dt>Backend</dt>
+          <dd>
+            Ruby/Ruby on Rails/PHP/CodeIgniter/Node.js
+          </dd>
+        </div>
+        <div class="skill_item">
+          <dt>Frontend</dt>
+          <dd>
+            HTML5/CSS3/JavaScript/vue.js/jQuery
+          </dd>
+        </div>
+        <div class="skill_item">
+          <dt>Design Tools</dt>
+          <dd>
+            Sketch/Illustrator/Photoshop
+          </dd>
+        </div>
+      </dl>
+    </section>
   </div>
 </template>
 

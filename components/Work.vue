@@ -1,10 +1,14 @@
 <template>
   <article class="work">
     <nuxt-link class="works-slug" :to="{ name: 'works-slug', params: { slug: slug } }">
-      <p class="work_key_img"><img :src="image"></p>
-      <!-- <time class="date" :datetime="date">{{ date | moment('YYYY') }}</time> -->
-    </nuxt-link>
-    <h2 class="title">{{ title }}</h2>
+      <div class="work-card">
+        <p class="work_key_img"><img :src="image"></p>
+        <!-- <time class="date" :datetime="date">{{ date | moment('YYYY') }}</time> -->
+        <div class="mask">
+          <h2 class="caption">{{ title }}</h2>
+        </div>
+      </div>
+    </nuxt-link>  
   </article>
 </template>
 
@@ -45,7 +49,49 @@ export default {
 <style scoped>
   .work_key_img {
     width: 100%;
-    /* border: solid 1px #000; */
+  }
+
+  .work-card .work_key_img img {
+    display: block;
+    transition: transform .6s ease-in-out;
+  }
+
+  .work-card:hover .work_key_img img {
+    transform: scale(1.08);
+  }
+
+  .work-card {
+    overflow: hidden;
+    width: 780px;
+    position: relative;
+  }
+
+  .work-card .mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .6s;
+  }
+
+  .work-card:hover .mask {
+    background-color: rgba(0,0,0,.6);
+  }
+
+  .work-card .mask .caption {
+    opacity: 0;
+    color: #fff;
+    letter-spacing: .1em;
+    font-size: 1rem;
+    transition: opacity .6s;
+  }
+
+  .work-card:hover .mask .caption {
+    opacity: 1;
   }
 
   .work a {
@@ -58,10 +104,5 @@ export default {
 
   .work a:hover {
     text-decoration: underline;
-  }
-
-  .work .title {
-    font-size: 1em;
-    font-weight: normal;
   }
 </style>>

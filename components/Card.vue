@@ -55,6 +55,7 @@ export default {
   .card {
     width: 32%;
     display: block;
+    background-color: #fff;
     /* width: 48.979%; */
     /* border: solid 1px #000; */
     /* border-radius: 2px; */

@@ -30,7 +30,7 @@ export default {
 <style scoped>
   .works {
     width: 780px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     margin-right: auto;
     margin-left: auto;
   }

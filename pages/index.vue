@@ -1,14 +1,11 @@
 <template>
   <div class="container">
-    <!-- <div class="menu"></div> -->
     <div class="key-back">
       <img src="/images/key_top.jpg">
       <p class="catch">
         <span>どんなにいいサービスも、</span>
         <span>知ってもらわなきゃ届かない。</span>
       </p>
-    </div>
-    <div class="testback">
     </div>
     <div>
       <section class="about-sect">
@@ -45,15 +42,20 @@
       </section>
       <section class="works-sect">
         <h2 class="sect-header">最新の制作実績</h2>
-        <swiper :options="swiperOptions" class="works-slider">
-          <swiper-slide>
-            <img src="/images/works.png">
-          </swiper-slide>
-          <swiper-slide>
-            <img src="/images/works.png">
-          </swiper-slide>
-          <div class="swiper-pagination" slot="pagination"></div>
-        </swiper>
+        <div v-if="latestWorks.length">
+          <swiper :options="swiperOptions" class="works-slider">
+            <swiper-slide class="works-card" v-for="lw in latestWorks" :key="lw.slug">
+              <nuxt-link class="works-slug" :to="{ name: 'works-slug', params: { slug: lw.slug } }">
+                <img :src="lw.image">
+              </nuxt-link>
+            </swiper-slide>
+            <!-- テスト用に一つ差し込み -->
+            <swiper-slide class="works-card">
+              <img src="/images/works.png">
+            </swiper-slide>
+            <div class="swiper-pagination" slot="pagination"></div>
+          </swiper>
+        </div>
         <div class="works-link">
           <nuxt-link to="/works">もっと見る→</nuxt-link>
         </div>
@@ -63,7 +65,8 @@
         <div class="profile-card fadein" v-scroll="handleScroll">
           <p class="profile-img"><img src="/images/profile.png"></p>
           <div class="profile-text">
-            <p class="my-name"><a href="https://github.com/irimemiri">@irimemiri</a></p>
+            <p class="my-name">irimemiri</p>
+            <!-- <a><i class="fab fa-github"></i></a> -->
             <p class="my-comment">絵とロックバンドとスプラトゥーンが好きです。<br>サークル活動がきっかけで広告に興味を持ち、広告系の企業でWebエンジニアとして働いていましたが、2020年の退職を機にデザインを学び始めました。</p>
             <p class="profile-link"><nuxt-link to="/about">詳しく→</nuxt-link></p>
           </div>
@@ -134,6 +137,7 @@ img {
 
 body {
   background-color: #f6f6f6;
+  color: #333;
 }
 
 .sect-header {
@@ -148,7 +152,7 @@ body {
   display: block;
   height: 4px;
   width: 80px;
-  background-color: #000;
+  background-color: #333;
   margin-right: 20px;
 }
 
@@ -197,6 +201,44 @@ body {
 .works-sect .works-slider {
   width: 580px;
   margin: 0 auto 60px;
+}
+
+.works-sect .works-card {
+  width: 580px;
+  height: 326px; /*temp*/
+  overflow: hidden;
+  position: relative;
+}
+
+.works-sect .works-card .mask {
+	width: 140%;	/* 画像の半分の大きさにする */
+  height: 100%;
+  transform: skewX(-30deg) scale(0, 1);
+  transform-origin: left top;
+  transition: transform .4s;
+  position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.6);
+}
+
+.works-sect .works-card:hover .mask {
+  transform: skewX(-30deg) scale(1, 1);
+  transform-origin: right top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.works-sect .works-card .mask .caption {
+  transform: skewX(30deg);
+  color: #fff;
+  font-weight: bold;
+  opacity: 0;
+}
+
+.works-sect .works-card:hover .mask .caption {
+  opacity: 1;
 }
 
 .works-sect .works-link {
@@ -293,6 +335,14 @@ body {
   text-align: center;
 }
 
+.contact-sect {
+  color: #333;
+}
+
+.contact-sect .sect-header:before {
+  background-color: #333;
+}
+
 .contact-sect .contact-dsc:first-child {
   margin-bottom: 28px;
 }
@@ -366,6 +416,11 @@ export default {
         );
       }
     }
+  },
+  async asyncData ({ $content, params }) {
+    const query = await $content('works' || 'index').limit(3)
+    const latestWorks = await query.fetch()
+    return { latestWorks }
   }
 }
 </script>
