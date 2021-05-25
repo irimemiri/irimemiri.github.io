@@ -49,10 +49,6 @@
                 <img :src="lw.image">
               </nuxt-link>
             </swiper-slide>
-            <!-- テスト用に一つ差し込み -->
-            <swiper-slide class="works-card">
-              <img src="/images/works.png">
-            </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
           </swiper>
         </div>
@@ -147,7 +143,7 @@ body {
   align-items: center;
 }
 
-.sect-header:before {
+.sect-header::before {
   content: "";
   display: block;
   height: 4px;

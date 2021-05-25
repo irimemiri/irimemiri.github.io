@@ -1,6 +1,6 @@
 <template>
   <div class="blog-wrapper">
-    <h1 class="page-title">ブログ</h1>
+    <h1 class="page-title"><span class="marker">ブログ</span></h1>
     <div v-if="posts.length">
       <card-list :posts="posts" />
     </div>
@@ -16,6 +16,10 @@
   margin-left: auto;
   margin-right: auto;
   padding-top: 150px;
+}
+
+.page-title .marker {
+  background: linear-gradient(transparent 60%, #c1e0ff 60%);
 }
 </style>
 <script>

@@ -1,18 +1,19 @@
 <template>
   <div class="works-wrapper">
-    <h1 class="page-title">制作実績</h1>
+    <h1 class="page-title"><span class="marker">制作実績</span></h1>
     <ul class="works-type">
-      <li class="works-type-item"><a href="#webdesign">Webサイト<span class="arrow-bottom"></span></a></li>
-      <li class="works-type-item"><a href="#others">ロゴ・バナー<span class="arrow-bottom"></span></a></li>
+      <li class="works-type-item"><a href="#webdesign">Web制作<span class="arrow-bottom"></span></a></li>
+      <li class="works-type-item"><a href="#others">印刷物・その他<span class="arrow-bottom"></span></a></li>
     </ul>
-    <h2 class="type-title" id="webdesign">Webサイト制作</h2>
+    <h2 class="type-title" id="webdesign">Web制作</h2>
     <div v-if="works.length">
       <work-list :works="works" />
     </div>
     <div v-else>
-      <p>データが見つかりません</p>
+      <p class="no-data">データが見つかりません</p>
     </div>
-    <h2 class="type-title" id="others">ロゴ・バナー制作</h2>
+    <h2 class="type-title" id="others">印刷物・その他</h2>
+    <p class="no-data">準備中です</p>
   </div>
 </template>
 
@@ -23,6 +24,10 @@
   margin-left: auto;
   margin-right: auto;
   padding-top: 150px;
+}
+
+.page-title .marker {
+  background: linear-gradient(transparent 60%, #c1e0ff 60%);
 }
 
 .page-title {
@@ -74,6 +79,11 @@
 .type-title {
   text-align: center;
   margin-bottom: 58px;
+}
+
+.no-data {
+  text-align: center;
+  margin-bottom: 100px;
 }
 
 </style>

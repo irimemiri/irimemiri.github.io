@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p class="to_top"><a href="">TOP</a></p>
+    <!-- <p class="to_top"><a href="">TOP</a></p> -->
     <p class="credit"><small class="copyright">&copy; irimemiri 2020.</small></p>
   </footer>
 </template>

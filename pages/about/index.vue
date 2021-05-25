@@ -1,67 +1,77 @@
 <template>
   <div class="profile-wrapper">
-    <h1 class="page-title">私について</h1>
+    <h1 class="page-title"><span class="marker">私について</span></h1>
+    <!-- <div class="profile-wrapper"> -->
     <section class="sect-wrapper">
       <h2 class="sect-title">プロフィール</h2>
       <div class="sect-content">
-        <p class="my-name">irimemiri</p>
-        <p class="my-comment">1995年生まれ。</p>
+        <p class="my-name">伊東絵美莉(@irimemiri)</p>
+        <p class="my-comment">1995年生まれ。大学在学中に大学生協の企画広報っぽいことをしてPRや広告に興味を持ち、卒業後は広告系の会社にWebエンジニアとして就職。
+          2020年、退職をきっかけにデザインに興味を持ち、職業訓練校でWeb制作を3ヶ月間学びました。
+          何事も考え抜くタイプで、目的に合わせて色々な手段を試すことが好きです。趣味は絵を描くこと、音楽鑑賞、語学。</p>
       </div>
     </section>
     <section class="sect-wrapper">
       <h2 class="sect-title">バックグラウンド</h2>
       <div class="sect-content">
-        <div>
-          2017年
-          大学の英文学科を卒業
-        </div>
-          ダイレクトメール発送代行会社の社内SE
-        <div>
-          デジタル広告代理店のエンジニア
-        </div>
-        <div>
-          職業訓練校でデザインを学ぶ
-        </div>
-        <div>
-          デザイナーを目指して勉強中
-        </div>
+        <dl class="history">
+          <div class="history-row">
+            <dt class="period">2017</dt>
+            <dd class="event">大学の英文学科を卒業</dd>
+          </div>
+          <div class="history-row">
+            <dt class="period">2017-2019</dt>
+            <dd class="event">DM発送代行会社の社内SE</dd>
+          </div>
+          <div class="history-row">
+            <dt class="period">2019-2020</dt>
+            <dd class="event">インターネット広告代理店のWebエンジニア</dd>
+          </div>
+          <div class="history-row">
+            <dt class="period">2020-2021</dt>
+            <dd class="event">職業訓練校でデザインを学ぶ</dd>
+          </div>
+          <div class="history-row">
+            <dt class="period">2021-現在</dt>
+            <dd class="event">デザイナーを目指して転職活動中</dd>
+          </div>
+        </dl>
       </div>
     </section>
     <section class="sect-wrapper">
       <h2 class="sect-title">スキルセット</h2>
-      <!-- <p class="prof_img"><img :src="`/images/prof.jpg`"></p>
-      <div class="bio">
-        <h2 class="name"><a href="https://github.com/irimemiri">@irimemiri</a></h2>
-        <p>絵と音楽とSplatoonが好きな圧倒的インドア派。英語と韓国語が少しわかります。</p>
-        <p>サークル活動がきっかけで広告に興味を持ち、大学卒業後は広告系の会社で社内SE、Webエンジニアとして勤務。2021年、エンジニアを辞めて、デザインを学び始めました。</p>
-      </div> -->
       <div class="sect-content">
-        <dl class="skill_list">
-          <div class="skill_item">
-            <dt>Backend</dt>
-            <dd>
+        <dl class="skillset">
+          <div class="skillset-row">
+            <dt class="skill-type">Backend</dt>
+            <dd class="skill-text">
               Ruby/Ruby on Rails/PHP/CodeIgniter/Node.js
             </dd>
           </div>
-          <div class="skill_item">
-            <dt>Frontend</dt>
-            <dd>
+          <div class="skillset-row">
+            <dt class="skill-type">Frontend</dt>
+            <dd class="skill-text">
               HTML5/CSS3/JavaScript/vue.js/jQuery
             </dd>
           </div>
-          <div class="skill_item">
-            <dt>Design Tools</dt>
-            <dd>
+          <div class="skillset-row">
+            <dt class="skill-type">Design Tools</dt>
+            <dd class="skill-text">
               Sketch/Illustrator/Photoshop
             </dd>
           </div>
         </dl>
       </div>
     </section>
-  </div>
+    </div>
+  <!-- </div> -->
 </template>
 
 <style>
+  .page-title .marker {
+    background: linear-gradient(transparent 60%, #c1e0ff 60%);
+  }
+
   .sect-wrapper {
     width: 780px;
     display: flex;
@@ -97,6 +107,30 @@
     text-align: center;
   }
 
+  .my-name {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .history {
+    font-size: .9em;
+  }
+
+  .history .history-row {
+    display: flex;
+    width: 680px;
+    line-height: 2em;
+  }
+
+  .history .history-row .period {
+    width: 180px;
+    letter-spacing: .1em;
+  }
+  .history .history-row .event {
+    width: 480px;
+  }
+
   /* とりあえず全体に幅設定 */
   .profile-wrapper {
     width: 980px;
@@ -105,29 +139,24 @@
     padding-top: 150px;
   }
 
-  .bio {
-    margin-bottom: 30px;
+  .skillset {
+    font-size: .9em;
+    /* margin-bottom: 20px; */
   }
 
-  .skills {
-    margin-bottom: 10px;
-  }
-
-  .skill_list {
-    margin-bottom: 20px;
-  }
-
-  .skill_item {
+  .skillset-row {
     display: flex;
+    width: 680px;
+    line-height: 2em;
+}
+
+  .skillset-row .skill-type {
+    width: 180px;
+    letter-spacing: .1em;
+    /* text-align: right; */
   }
 
-  .skill_item dt {
-    width: 35.897%; /* 280/780 */
-    text-align: right;
-    margin-right: 2.564% /* 20/780 */
-  }
-
-  .skill_item dd {
-    width: 61.538%; /* 480/780 */
+  .skillset-row .skill-text {
+    width: 480px;
   }
 </style>
