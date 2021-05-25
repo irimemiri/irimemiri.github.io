@@ -6,7 +6,7 @@ export default {
   head: {
     title: 'stoat',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ja'
     },
     meta: [
       { charset: 'utf-8' },
@@ -64,5 +64,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  // github pagesでデプロイするために追加
+  router: {
+    base: '/irimemiri.github.io/'
   }
 }
