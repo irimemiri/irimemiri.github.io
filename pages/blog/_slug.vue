@@ -1,6 +1,6 @@
 <template>
   <article class="blog_post">
-    <p class="post_eyecatch"><img :src="blog.image" /></p>
+    <p class="post_eyecatch" v-if="blog.image"><img :src="blog.image" /></p>
     <h1 class="post_title">{{ blog.title }}</h1>
     <p class="created_at">{{ blog.date | moment('YYYY.MM.DD') }}</p>
     <ul class="post_tags">
@@ -46,6 +46,7 @@ export default {
   padding-bottom: 55px;
   background-color: #fff;
   margin-bottom: 80px;
+  overflow: hidden;
 }
 
 .blog_post .post_eyecatch img {

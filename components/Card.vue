@@ -5,7 +5,7 @@
         <img :src="thumbnail">
       </p>
       <p class="blog-thumb" v-else>
-        <img src="/images/blog/blog_thumb.png">
+        <img src="/images/blog/thumbnails/no-image.png">
       </p>
       <div class="card-description">
         <h2 class="title">{{ title }}</h2>
