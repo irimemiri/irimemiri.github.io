@@ -32,7 +32,8 @@ export default {
 /* FIXME: scopedにするとnuxt-contentのスタイルがきれる */
 
 .work_piece {
-  width: 980px;
+  width: 76.562%; /* 980/1280 */
+  max-width: 980px;
   margin-left: auto;
   margin-right: auto;
   line-height: 2;
@@ -68,7 +69,7 @@ export default {
 .piece_tags .tag_label {
   font-family: sans-serif;
   font-size: .8em;
-  padding: 5px;
+  padding: 5px; /* fixed */
 }
 
 .piece_link a {
@@ -76,8 +77,8 @@ export default {
   font-family: sans-serif;
   border: solid 1px #ccc;
   border-radius: 2px;
-  font-size: .8em;
-  padding: 5px;
+  font-size: .6em;
+  padding: 5px 8px; /* fixed */
 }
 
 .piece_link a:link, .piece_link a:visited {
@@ -85,12 +86,12 @@ export default {
 }
 
 .work_piece .nuxt-content {
-  width: 980px;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 10px;
-  padding-left: 160px;
-  padding-right: 160px;
+  padding-left: 16.326%; /* 160/980 */
+  padding-right: 16.326%; /* 160/980 */
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -122,7 +123,7 @@ export default {
 .work_piece .back-link {
   text-decoration: none;
   display: inline-block;
-  padding: 0px 20px;
+  padding: 0px 20px; /* fixed */
   border: solid 1px skyblue;
   border-radius: 50px;
   font-size: .8em;
@@ -148,13 +149,13 @@ export default {
 
 @media screen and (max-width: 780px) {
   .work_piece {
-    width: 370px;
+    width: 96%; /* 370/375 edited */
   }
 
   .work_piece .nuxt-content {
-    width: 370px;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 100%;
+    padding-left: 4.054%; /* 15/370 */
+    padding-right: 4.054%;
     padding-top: 20px;
   }
 

@@ -29,7 +29,7 @@ export default {
 
 <style scoped>
 .works {
-  width: 780px;
+  width: 79.591%; /* 780/980 */
   margin-bottom: 40px;
   margin-right: auto;
   margin-left: auto;
@@ -45,7 +45,8 @@ export default {
 @media screen and (max-width: 780px) {
   .works {
     /* 効いてない気がする */
-    width: 370px;
+    /* width: 370px; */
+    width: 100%; /* 370/370 */
   }
 }
 </style>>

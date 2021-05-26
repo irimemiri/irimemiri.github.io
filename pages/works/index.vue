@@ -18,9 +18,9 @@
 </template>
 
 <style scoped>
-/* とりあえず全体に幅設定 */
 .works-wrapper {
-  width: 980px;
+  width: 76.562%; /* 980/1280 */
+  max-width: 980px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 150px;
@@ -36,7 +36,7 @@
 
 .works-type {
   list-style-type: none;
-  width: 580px;
+  width: 59.183%; /* 580/980 */
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -44,7 +44,7 @@
 }
 
 .works-type .works-type-item {
-  width: 280px;
+  width: 48.275%; /* 280/580 */
   line-height: 55px;
   text-align: center;
 }
@@ -67,9 +67,9 @@
 
 .arrow-bottom {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 10px;
+  width: .6em; /* 10px */
+  height: .6em; /* 10px */
+  margin: 0 10px; /* fixed */
   border-bottom: 2px solid #fff;
   border-right: 2px solid #fff;
   /* 調整 */
@@ -95,16 +95,16 @@
 
 @media screen and (max-width: 780px) {
   .works-wrapper {
-    width: 370px;
+    width: 96%; /* 370/375 edited */
     padding-top: 60px;
   }
 
   .works-type {
-    width: 370px;
+    width: 100%;
   }
 
   .works-type .works-type-item {
-    width: 178px;
+    width: 48.108%; /* 178/370 */
   }
 }
 </style>

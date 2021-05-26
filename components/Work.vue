@@ -62,7 +62,7 @@ export default {
 
   .work-card {
     overflow: hidden;
-    width: 780px;
+    width: 100%;
     position: relative;
   }
 
@@ -75,7 +75,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 20px 2.564%; /* 20/780 */
     text-align: center;
     transition: background-color .6s;
   }
@@ -117,7 +117,7 @@ export default {
 
   @media screen and (max-width: 780px) {
     .work-card {
-      width: 370px;
+      width: 100%; /* 370/370 */;
     }
   }
 </style>>
