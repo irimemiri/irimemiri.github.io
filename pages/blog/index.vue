@@ -10,9 +10,9 @@
   </div>
 </template>
 <style scoped>
-/* とりあえず全体に幅設定 */
 .blog-wrapper {
-  width: 980px;
+  width: 76.562%; /* 980/1280 */
+  max-width: 980px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 150px;
@@ -28,7 +28,7 @@
 
 @media screen and (max-width: 780px) {
   .blog-wrapper {
-    width: 370px;
+    width: 96%; /* 370/375 edited */
     padding-top: 60px;
   }
 }

@@ -32,7 +32,8 @@ export default {
 
 <style>
 .blog_post {
-  width: 980px;
+  width: 76.562%; /* 980/1280 */
+  max-width: 980px;
   margin-left: auto;
   margin-right: auto;
   line-height: 2.2;
@@ -63,7 +64,7 @@ export default {
 .post_tags .tag_label {
   font-family: sans-serif;
   font-size: .8em;
-  padding: 5px;
+  padding: 5px; /* fixed */
 }
 
 .blog_post .nuxt-content {
@@ -96,7 +97,7 @@ export default {
 .blog_post .back-link {
   text-decoration: none;
   display: inline-block;
-  padding: 0px 20px;
+  padding: 0px 20px; /* fixed */
   border: solid 1px skyblue;
   border-radius: 50px;
   font-size: .8em;
@@ -114,13 +115,13 @@ export default {
 
 @media screen and (max-width: 780px) {
   .blog_post {
-    width: 370px;
+    width: 96%; /* 370/375 edited */
   }
 
   .blog_post .nuxt-content {
-    width: 370px;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 100%;
+    padding-left: 4.054%; /* 15/370 */
+    padding-right: 4.054%;
     padding-top: 20px;
   }
 

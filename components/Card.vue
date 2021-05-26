@@ -53,6 +53,7 @@ export default {
 
 <style scoped>
   .card {
+    /* FIXME: ここに幅を書くのはおかしいと思う */
     width: 32%;
     display: block;
     background-color: #fff;
@@ -107,7 +108,8 @@ export default {
 
 @media screen and (max-width: 780px) {
   .card {
-    width: 175px;
+    /* FIXME: ここに幅を書くのはおかしいと思う */
+    width: 47.297%; /* 175/370 */
   }
 }
 </style>>
