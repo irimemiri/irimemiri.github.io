@@ -28,10 +28,24 @@ export default {
 </script>
 
 <style scoped>
+.works {
+  width: 780px;
+  margin-bottom: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*
+  ===========================
+  target size:
+  375px(750px)x677px(1334px);
+  ===========================
+*/ 
+
+@media screen and (max-width: 780px) {
   .works {
-    width: 780px;
-    margin-bottom: 40px;
-    margin-right: auto;
-    margin-left: auto;
+    /* 効いてない気がする */
+    width: 370px;
   }
+}
 </style>>

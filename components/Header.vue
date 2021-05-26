@@ -152,6 +152,14 @@ header {
   opacity: 1;
   pointer-events: auto;
 }
+
+@media screen and (max-width: 780px) {
+  #g_nav{
+    width: 100%;
+    right: -100%;
+  }
+}
+
 </style>
 
 <script>

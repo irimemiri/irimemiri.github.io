@@ -19,7 +19,7 @@
           本サイトは就職活動用に作成したポートフォリオサイトです。<br>
           私にとってデザインとは「届けること」です。<br>
           いいものやサービスを、必要としている人のところに届ける、そして同時に依頼主の想いを届けることを大事にしたいと思い、
-          当サイトのモチーフには紙飛行機を選びました。
+          サイトトップの画像に紙飛行機を選びました。
         </p>
       </section>
       <section class="policy-sect">
@@ -122,7 +122,8 @@ img {
   position: absolute;
   width: 600px;
   z-index: 100;
-  top: 600px;
+  /* FIXME: 位置崩れやすい */
+  bottom: 120px;
   right: 20px;
   color: #fff;
 }
@@ -173,14 +174,15 @@ body {
   margin-bottom: 80px;
 }
 
-.about-dsc {
+.about-sect .about-dsc {
   width: 680px;
   margin-left: 300px;
   line-height: 1.8;
 }
 
-.policy-list {
+.policy-sect .policy-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -397,6 +399,89 @@ body {
   min-width: 0.3em;
   font-size: 2rem;
   animation: text-in .8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 0s backwards;
+}
+
+/*
+  ===========================
+  target size:
+  375px(750px)x677px(1334px);
+  ===========================
+*/ 
+
+@media screen and (max-width: 780px) {
+  .site-title {
+    /* FIXME: 位置崩れやすい */
+    /* width: 370px; */
+    width: 100%;
+    bottom: 60px;
+    right: auto;
+    left: auto;
+    text-align: center;
+  }
+  /* wrapper */
+  .about-sect, .policy-sect, .works-sect, .profile-sect, .contact-sect {
+    width: 370px;
+  }
+
+  .about-sect .about-dsc {
+    width: 370px;
+    margin-left: 0; /*ちゃんと計算する*/
+  }
+
+  .policy-sect .policy-item {
+    width: 370px;
+    background-color: #fff;
+    padding: 18px 32px;
+    margin-bottom: 20px;
+  }
+
+  .policy-sect .policy-item:last-child {
+    margin-bottom: 0px;
+  }
+
+  .works-sect .works-slider {
+    width: 370px;/*ちゃんと計算する*/
+  }
+
+  .works-sect .works-card {
+    width: 370px;/*ちゃんと計算する*/
+    height: auto;
+  }
+
+  .works-sect .works-link a {
+    padding-right: 20px;/*ちゃんと計算する*/
+    margin-right: 10px;/*ちゃんと計算する*/
+  }
+
+
+  .profile-sect .profile-card {
+    width: 370px;
+    padding: 20px 10px;
+    display: block; /*flex打ち消し*/
+  }
+
+  .profile-sect .profile-card .profile-img {
+    width: 140px;
+    padding: 0;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    border: solid 4px #ddd;
+  }
+
+  .profile-sect .profile-card .my-name {
+    text-align: center;
+  }
+
+  .profile-sect .profile-card .my-name::after {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .profile-sect .profile-card .profile-text {
+    width: 340px;
+    padding: 10px;
+  }
 }
 </style>
 

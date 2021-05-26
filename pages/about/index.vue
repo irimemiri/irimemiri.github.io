@@ -74,109 +74,143 @@
   </div>
 </template>
 
-<style>
-  .page-title .marker {
-    background: linear-gradient(transparent 60%, #c1e0ff 60%);
+<style scoped>
+.page-title .marker {
+  background: linear-gradient(transparent 60%, #c1e0ff 60%);
+}
+
+.page-title {
+  margin-bottom: 64px;
+}
+
+.sect-wrapper {
+  width: 780px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.sect-wrapper .sect-title {
+  width: 180px;
+  font-size: 1em;
+  text-align: right;
+}
+
+.sect-wrapper .sect-content {
+  width: 580px;
+  line-height: 1.8;
+}
+
+.prof_img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.name {
+  margin-bottom: 15px;
+}
+
+.name a:link, .name a:visited {
+  color: #000;    
+}
+
+.name, .skills {
+  text-align: center;
+}
+
+.my-name {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.my-name .github-link:link, .my-name .github-link:visited, .my-name .github-link:hover {
+  color: #000;
+}
+
+.history, .skillset {
+  font-size: .9em;
+}
+
+.history .history-row, .skillset-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 680px;
+  line-height: 2em;
+}
+
+.history .history-row .period, .skillset-row .skill-type {
+  width: 180px;
+  letter-spacing: .1em;
+  text-align: right;
+  padding-right: 20px;
+}
+.history .history-row .event, .skillset-row .skill-text {
+  width: 480px;
+  letter-spacing: .1em;
+}
+
+/* とりあえず全体に幅設定 */
+.profile-wrapper {
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 150px;
+}
+
+/* .profile-inner-box { */
+  /* background-color: #fff; */
+/* } */
+
+/*
+  ===========================
+  target size:
+  375px(750px)x677px(1334px);
+  ===========================
+*/ 
+
+@media screen and (max-width: 780px) {
+  /* TODO: 各ページ統一 */
+  .profile-wrapper {
+    width: 370px;
+    padding-top: 60px;
+  }
+
+  .page-title {
+    margin-bottom: 40px;
   }
 
   .sect-wrapper {
-    width: 780px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 100px;
+    width: 370px;
   }
 
   .sect-wrapper .sect-title {
-    width: 180px;
-    font-size: 1em;
-    text-align: right;
+    width: 370px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
   }
 
   .sect-wrapper .sect-content {
-    width: 580px;
-    line-height: 1.8;
+    width: 370px;
   }
 
-  .prof_img {
-    width: 100%;
-    margin-bottom: 30px;
+  .history, .skillset {
+    font-size: .8em;
   }
 
-  .name {
-    margin-bottom: 15px;
+  .history .history-row, .skillset-row {
+    width: 370px;
   }
 
-  .name a:link, .name a:visited {
-    color: #000;    
+  .history .history-row .period, .skillset-row .skill-type {
+    width: 140px;
   }
 
-  .name, .skills {
-    text-align: center;
+  .history .history-row .event, .skillset-row .skill-text {
+    width: 215px;
   }
-
-  .my-name {
-    font-size: 1em;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  .my-name .github-link:link, .my-name .github-link:visited, .my-name .github-link:hover {
-    color: #000;
-  }
-
-  .history {
-    font-size: .9em;
-  }
-
-  .history .history-row {
-    display: flex;
-    width: 680px;
-    line-height: 2em;
-  }
-
-  .history .history-row .period {
-    width: 180px;
-    letter-spacing: .1em;
-    text-align: right;
-    padding-right: 20px;
-  }
-  .history .history-row .event {
-    width: 480px;
-    letter-spacing: .1em;
-  }
-
-  /* とりあえず全体に幅設定 */
-  .profile-wrapper {
-    width: 980px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 150px;
-  }
-
-  /* .profile-inner-box { */
-    /* background-color: #fff; */
-  /* } */
-
-  .skillset {
-    font-size: .9em;
-    /* margin-bottom: 20px; */
-  }
-
-  .skillset-row {
-    display: flex;
-    width: 680px;
-    line-height: 2em;
 }
-
-  .skillset-row .skill-type {
-    width: 180px;
-    letter-spacing: .1em;
-    text-align: right;
-    padding-right: 20px;
-  }
-
-  .skillset-row .skill-text {
-    width: 480px;
-    letter-spacing: .1em;
-  }
 </style>

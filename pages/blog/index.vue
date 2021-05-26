@@ -9,7 +9,7 @@
     </div>
   </div>
 </template>
-<style>
+<style scoped>
 /* とりあえず全体に幅設定 */
 .blog-wrapper {
   width: 980px;
@@ -20,6 +20,17 @@
 
 .page-title .marker {
   background: linear-gradient(transparent 60%, #c1e0ff 60%);
+}
+
+.page-title {
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 780px) {
+  .blog-wrapper {
+    width: 370px;
+    padding-top: 60px;
+  }
 }
 </style>
 <script>

@@ -75,6 +75,8 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    text-align: center;
     transition: background-color .6s;
   }
 
@@ -104,5 +106,18 @@ export default {
 
   .work a:hover {
     text-decoration: underline;
+  }
+
+  /*
+    ===========================
+    target size:
+    375px(750px)x677px(1334px);
+    ===========================
+  */ 
+
+  @media screen and (max-width: 780px) {
+    .work-card {
+      width: 370px;
+    }
   }
 </style>>

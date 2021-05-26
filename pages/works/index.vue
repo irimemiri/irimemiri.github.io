@@ -17,7 +17,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 /* とりあえず全体に幅設定 */
 .works-wrapper {
   width: 980px;
@@ -31,7 +31,7 @@
 }
 
 .page-title {
-  margin-bottom: 64px;
+  margin-bottom: 40px;
 }
 
 .works-type {
@@ -86,6 +86,27 @@
   margin-bottom: 100px;
 }
 
+/*
+  ===========================
+  target size:
+  375px(750px)x677px(1334px);
+  ===========================
+*/ 
+
+@media screen and (max-width: 780px) {
+  .works-wrapper {
+    width: 370px;
+    padding-top: 60px;
+  }
+
+  .works-type {
+    width: 370px;
+  }
+
+  .works-type .works-type-item {
+    width: 178px;
+  }
+}
 </style>
 
 <script>

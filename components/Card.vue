@@ -56,9 +56,6 @@ export default {
     width: 32%;
     display: block;
     background-color: #fff;
-    /* width: 48.979%; */
-    /* border: solid 1px #000; */
-    /* border-radius: 2px; */
   }
 
   .card a {
@@ -100,4 +97,17 @@ export default {
     padding: 3px 5px;
     font-size: .8em;
   }
+
+/*
+  ===========================
+  target size:
+  375px(750px)x677px(1334px);
+  ===========================
+*/ 
+
+@media screen and (max-width: 780px) {
+  .card {
+    width: 175px;
+  }
+}
 </style>>
