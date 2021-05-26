@@ -45,18 +45,10 @@ html {
   width: 100%;
   position: relative;
   min-height: 100%;
+  overflow: hidden;
 }
 
 #main_content {
   padding-bottom: 40px; /*フッターの高さ*/
 }
-
-/* #wrapper {
-  width: 76.562%; 980/1280 
-  max-width: 980px;
-  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
-  margin-left: auto;
-  margin-right: auto;
-} */
-
 </style>

@@ -34,12 +34,12 @@ export default {
 .work_piece {
   width: 76.562%; /* 980/1280 */
   max-width: 980px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 2;
-  margin-top: 55px;
   padding-bottom: 55px;
   background-color: #fff;
+  line-height: 2;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 55px;
   margin-bottom: 80px;
 }
 

@@ -10,8 +10,8 @@
     line-height: 40px;
     background-color: #333;
     width: 100%;
-    position:absolute;
-    bottom:0;
+    position: absolute;
+    bottom: 0;
   }
 
   .to_top {
