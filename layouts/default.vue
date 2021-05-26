@@ -48,7 +48,7 @@ html {
 }
 
 #main_content {
-  padding-bottom: 20px; /*フッターの高さ*/
+  padding-bottom: 40px; /*フッターの高さ*/
 }
 
 /* #wrapper {

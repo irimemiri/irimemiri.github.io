@@ -7,15 +7,18 @@
 
 <style>
   footer {
-    line-height: 20px;
+    line-height: 40px;
     background-color: #333;
+    width: 100%;
+    position:absolute;
+    bottom:0;
   }
 
   .to_top {
     width: 100%;
     line-height: 55px;
     text-align: center;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
   }
 
   .to_top a {
@@ -28,7 +31,6 @@
 
   .credit {
     text-align: center;
-    padding: 10px;
   }
 
   .copyright {
