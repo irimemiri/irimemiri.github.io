@@ -1,6 +1,6 @@
 ---
 title: サンプルページ
-date: 2021-04-14
+date: 2000-04-14
 tags: [Nuxtjs,Vuejs] #ここの書き方は配列じゃなくしたい
 image: '/images/blog/blog_thumb.png'
 ---

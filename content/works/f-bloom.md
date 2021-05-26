@@ -1,6 +1,6 @@
 ---
 title: プリザーブドフラワー専門店「f-bloom」 サイト制作/ロゴ制作
-date: 2021-02-01
+date: 2021-01-01
 tags: [design]
 image: '/images/works/f-bloom_sum.jpg'
 url: 'https://design.tamagobo-labo.com/f-bloom'

@@ -40,7 +40,10 @@ export default {
   components: { CardList }, //　これいらない？なくても動く
   async asyncData ({ $content, params }) {
     const query = await $content('blog' || 'index').limit(15)
-    const posts = await query.fetch()
+    const allPosts = await query.fetch()
+    const posts = allPosts.sort(function (a, b) {
+      return new Date(b.date) - new Date(a.date);
+    });
     return { posts }
   }
 }

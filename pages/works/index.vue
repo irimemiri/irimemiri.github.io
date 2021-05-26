@@ -116,7 +116,10 @@ export default {
   components: { WorkList }, //　これいらない？なくても動く
   async asyncData ({ $content, params }) {
     const query = await $content('works' || 'index').limit(15)
-    const works = await query.fetch()
+    const allWorks = await query.fetch()
+    const works = allWorks.sort(function (a, b) {
+      return new Date(b.date) - new Date(a.date);
+    });
     return { works }
   }
 }
