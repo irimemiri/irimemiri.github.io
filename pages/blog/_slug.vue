@@ -8,6 +8,9 @@
     </ul>
 
     <nuxt-content :document="blog" />
+    <div class="bottom-menu">
+      <nuxt-link to="/blog" class="back-link">←&nbsp;一覧へ戻る</nuxt-link>
+    </div>
   </article>
 </template>
 
@@ -32,10 +35,11 @@ export default {
     width: 980px;
     margin-left: auto;
     margin-right: auto;
-    line-height: 2;
-    padding-top: 55px;
+    line-height: 2.2;
+    margin-top: 55px;
     padding-bottom: 55px;
     background-color: #fff;
+    margin-bottom: 80px;
   }
 
   .blog_post .post_eyecatch img {
@@ -62,14 +66,50 @@ export default {
     padding: 5px;
   }
 
-  .nuxt-content {
+  .blog_post .nuxt-content {
     width: 79.591%; /* 780/980 */
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 10px;
+    padding: 40px 40px;
+}
+
+  .blog_post .nuxt-content h2 {
+    border-bottom: solid 1px #999;
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
 
-  .nuxt-content h2 {
-    line-height: 60px;
-    margin-top: 10px;
+  .blog_post .nuxt-content h2:first-child {
+    margin-top: 30px;
   }
+
+  .blog_post .nuxt-content h3 {
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+
+  .blog_post .bottom-menu {
+    text-align: center;
+  }
+
+  .blog_post .back-link {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 20px;
+    border: solid 1px skyblue;
+    border-radius: 50px;
+    font-size: .8em;
+    line-height: 32px;
+    transition-duration: .3s;
+  }
+  
+  .blog_post .back-link:link, .back-link:visited {
+    color: skyblue; /*temp*/
+  }
+
+  .blog_post .back-link:hover {
+    color: skyblue;
+  }
+
 </style>

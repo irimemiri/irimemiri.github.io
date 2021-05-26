@@ -2,11 +2,15 @@
   <div class="container">
     <div class="key-back">
       <img src="/images/key_top.jpg">
-      <h1 class="site-title"><span>irimemiri's web portfolio</span></h1>
-      <!-- <p class="catch">
-        <span>どんなにいいサービスも、</span>
-        <span>知ってもらわなきゃ届かない。</span>
-      </p> -->
+      <h1 class="site-title">
+        <span
+          v-for="(t, index) in text"
+          :key="index"
+          class="item"
+          :style="{animationDelay: index*100+'ms'}"
+          v-text="t"
+        />
+      </h1>
     </div>
     <div>
       <section class="about-sect">
@@ -121,14 +125,6 @@ img {
   top: 600px;
   right: 20px;
   color: #fff;
-}
-
-.key-back .catch {
-  position: absolute;
-  width: 600px;
-  z-index: 100;
-  top: 600px;
-  right: 10px;
 }
 
 .key-back .catch span {
@@ -390,6 +386,18 @@ body {
   transition-delay: 1000ms;
 }
 
+@keyframes text-in {
+  0% {
+    transform: translate(0, -20px);
+    opacity: 0;
+  }
+}
+.item {
+  display: inline-block;
+  min-width: 0.3em;
+  font-size: 2rem;
+  animation: text-in .8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 0s backwards;
+}
 </style>
 
 <script>
@@ -407,7 +415,8 @@ export default {
           el: '.swiper-pagination',
           clickable: true
         }
-      }
+      },
+      text: "irimemiri's web portfolio"
     }
   },
   methods: {

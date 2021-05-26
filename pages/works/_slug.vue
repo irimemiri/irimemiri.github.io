@@ -6,6 +6,9 @@
     <p v-if="work.url" class="piece_link"><a :href="work.url">VISIT&nbsp;<i class="fas fa-external-link-alt"></i></a></p>
 
     <nuxt-content :document="work" />
+    <div class="bottom-menu">
+      <nuxt-link to="/works" class="back-link">←&nbsp;一覧へ戻る</nuxt-link>
+    </div>
   </article>
 </template>
 
@@ -45,6 +48,10 @@ export default {
     text-align: center;
   }
 
+  .work_piece .created_at {
+    font-size: .8em;
+  }
+
   .work_piece .piece_title {
     margin-top: 30px;
     font-size: 1em;
@@ -75,14 +82,55 @@ export default {
     color: #000;
   }
 
-  .nuxt-content {
-    width: 79.591%; /* 780/980 */
+  .work_piece .nuxt-content {
+    width: 980px;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 10px;
+    padding: 40px 160px;
   }
 
-  .nuxt-content h2 {
+  .work_piece .nuxt-content h2 {
+    font-size: 1.1em;
     line-height: 60px;
     margin-top: 10px;
+  }
+
+  .work_piece .nuxt-content h2:first-child {
+    margin-top: 30px;
+  }
+
+  .work_piece .nuxt-content h3 {
+    font-size: 1em;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+
+  .work_piece .nuxt-content p {
+    font-size: .9em;
+  }
+
+  .work_piece .bottom-menu {
+    text-align: center;
+  }
+
+  .work_piece .back-link {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 20px;
+    border: solid 1px skyblue;
+    border-radius: 50px;
+    font-size: .8em;
+    line-height: 32px;
+    transition-duration: .3s;
+  }
+  
+  .work_piece .back-link:link, .back-link:visited {
+    color: skyblue; /*temp*/
+  }
+
+  .work_piece .back-link:hover {
+    color: #fff;
+    background-color: skyblue;
   }
   </style>
