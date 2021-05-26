@@ -165,7 +165,8 @@ body {
 }
 
 .about-sect, .policy-sect, .works-sect, .profile-sect, .contact-sect {
-  width: 980px;
+  width: 76.562%; /* 980/1280 */
+  max-width: 980px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -175,8 +176,8 @@ body {
 }
 
 .about-sect .about-dsc {
-  width: 680px;
-  margin-left: 300px;
+  width: 69.387%; /* 680/980 */
+  margin-left: 30.612%; /* 300/980 */
   line-height: 1.8;
 }
 
@@ -187,9 +188,9 @@ body {
 }
 
 .policy-sect .policy-item {
-  width: 313px;
+  width: 31.938%; /* 313/980 */
   background-color: #fff;
-  padding: 18px 32px;
+  padding: 18px 3.265%; /* 32/980 */
 }
 
 .policy-sect .policy-item .policy-item-title {
@@ -203,19 +204,19 @@ body {
 }
 
 .works-sect .works-slider {
-  width: 580px;
+  width: 59.183%; /* 580/980 */
   margin: 0 auto 60px;
 }
 
 .works-sect .works-card {
-  width: 580px;
-  height: 326px; /*temp*/
+  width: 100%; /* ~~580/980~~ 980/980 */
+  height: auto; /* 326px */
   overflow: hidden;
   position: relative;
 }
 
-.works-sect .works-card .mask {
-	width: 140%;	/* 画像の半分の大きさにする */
+/* .works-sect .works-card .mask {
+	width: 140%;
   height: 100%;
   transform: skewX(-30deg) scale(0, 1);
   transform-origin: left top;
@@ -239,11 +240,11 @@ body {
   color: #fff;
   font-weight: bold;
   opacity: 0;
-}
+} */
 
-.works-sect .works-card:hover .mask .caption {
+/* .works-sect .works-card:hover .mask .caption {
   opacity: 1;
-}
+} */
 
 .works-sect .works-link {
   text-align: right;
@@ -254,9 +255,9 @@ body {
   display: inline-block;
   font-size: .8em;
   line-height: 28px;
-  padding-right: 20px;
-  padding-left: 20px;
-  margin-right: 100px;
+  padding-right: 20px; /*fixed*/
+  padding-left: 20px; /*fixed*/
+  margin-right: 10.204%; /* 100/980 */
   border-bottom: solid 1px #000;
 }
 
@@ -269,9 +270,9 @@ body {
 }
 
 .profile-sect .profile-card {
-  width: 780px;
+  width: 79.591%; /* 780/980 */
   background-color: #fff;
-  padding: 40px;
+  padding: 5.128%; /* 40/780 */
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -279,15 +280,18 @@ body {
 }
 
 .profile-sect .profile-card .profile-img {
-  width: 280px;
-  padding-right: 20px;
-  padding-left: 20px;
-  margin-right: 20px;
+  width: 35.897%; /* 280/780 */
+  /* TODO: なんか変なので計算し直す */
+  /*padding-right: 20px; /* 20/280 */
+  /*padding-left: 20px; /* 20/280 */
+  margin-right: 2.564%; /* 20/780 */
+  border-radius: 50%;
+  border: solid 4px #ddd;
 }
 
 .profile-sect .profile-card .profile-text {
-  width: 480px;
-  padding: 28px;
+  width: 61.538%; /* 480/780 */
+  padding: 28px 5.833% /* 28/480 */;
 }
 
 .profile-sect .profile-card .my-name {
@@ -306,7 +310,7 @@ body {
   display: block;
   position: relative;
   top: 5px;
-  width: 38px;
+  width: 7.916%; /* 38/480 */
   height: 2px;
   border-radius: 10px;
   background-color: #000;
@@ -412,7 +416,7 @@ body {
   .site-title {
     /* FIXME: 位置崩れやすい */
     /* width: 370px; */
-    width: 100%;
+    width: 96%; /* 370/375 edited */
     bottom: 60px;
     right: auto;
     left: auto;
@@ -420,18 +424,22 @@ body {
   }
   /* wrapper */
   .about-sect, .policy-sect, .works-sect, .profile-sect, .contact-sect {
-    width: 370px;
+    width: 96%; /* 370/375 edited */
   }
 
   .about-sect .about-dsc {
-    width: 370px;
+    width: 100%;
     margin-left: 0; /*ちゃんと計算する*/
   }
 
+  .policy-sect .policy-list {
+    justify-content: center;
+  }
+
   .policy-sect .policy-item {
-    width: 370px;
+    width: 96%; /* 370/375 edited */
     background-color: #fff;
-    padding: 18px 32px;
+    padding: 18px 8.648%; /* 32/370 */
     margin-bottom: 20px;
   }
 
@@ -440,24 +448,24 @@ body {
   }
 
   .works-sect .works-slider {
-    width: 370px;/*ちゃんと計算する*/
+    width: 96%; /* 370/375 edited */
   }
 
   .works-sect .works-card {
-    width: 370px;/*ちゃんと計算する*/
+    width: 96%; /* 370/375 edited */
     height: auto;
   }
 
   .works-sect .works-link a {
-    padding-right: 20px;/*ちゃんと計算する*/
-    margin-right: 10px;/*ちゃんと計算する*/
+    padding-right: 20px; /* fixed */
+    margin-right: 2.702%; /* 10/370 */
   }
 
 
   .profile-sect .profile-card {
-    width: 370px;
-    padding: 20px 10px;
-    display: block; /*flex打ち消し*/
+    width: 80%; /* 370/370 edited */
+    padding: 20px 0.02%; /* 10/370 edited */
+    display: block;
   }
 
   .profile-sect .profile-card .profile-img {
@@ -465,7 +473,7 @@ body {
     padding: 0;
     margin: 0 auto 10px;
     border-radius: 50%;
-    border: solid 4px #ddd;
+    /* border: solid 4px #ddd; */
   }
 
   .profile-sect .profile-card .my-name {
@@ -479,8 +487,10 @@ body {
   }
 
   .profile-sect .profile-card .profile-text {
-    width: 340px;
-    padding: 10px;
+    width: 91.891%; /* 340/370 */
+    padding: 10px 2%;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 </style>
@@ -506,7 +516,7 @@ export default {
   },
   methods: {
     handleScroll: function(evt, el) {
-      // FIXME: スクロールのたびにディレクティブ使った回数だけ計算されてるので重くなる気がする いくつ使おうが1回で住むようにしたい
+      // FIXME: スクロールのたびにディレクティブ使った回数だけ計算されてるので重くなる気がする いくつ使おうが1回で済むようにしたい
       let top = el.getBoundingClientRect().top;
       let wHeight = window.innerHeight;
       if ( top < wHeight / 1.5 ) {
