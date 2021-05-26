@@ -4,14 +4,15 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'stoat',
+    title: "irimemiri's portfolio",
+    titleTemplate:  "%s - irimemiri's portfolio",
     htmlAttrs: {
       lang: 'ja'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'irimemiriのWebポートフォリオ' },
       { hid: 'robots', name: 'robots', content: 'noindex,nofollow' }
     ],
     link: [

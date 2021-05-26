@@ -1,6 +1,6 @@
 <template>
   <div class="profile-wrapper">
-  <h1 class="page-title"><span class="marker">私について</span></h1>
+  <h1 class="page-title"><span class="marker">{{ title }}</span></h1>
     <section class="sect-wrapper">
       <h2 class="sect-title">プロフィール</h2>
       <div class="sect-content">
@@ -214,3 +214,18 @@
   }
 }
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      title: '私について'
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+    }
+  }
+}
+</script>

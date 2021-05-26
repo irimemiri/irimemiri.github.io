@@ -26,6 +26,11 @@ export default {
   async asyncData ({ $content, params }) {
     const blog = await $content('blog', params.slug || 'index').fetch()
     return { blog }
+  },
+  head() {
+    return {
+      title: this.blog.title,
+    }
   }
 }
 </script>

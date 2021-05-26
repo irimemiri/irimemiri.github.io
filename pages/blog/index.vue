@@ -1,6 +1,6 @@
 <template>
   <div class="blog-wrapper">
-    <h1 class="page-title"><span class="marker">ブログ</span></h1>
+    <h1 class="page-title"><span class="marker">{{ title }}</span></h1>
     <div v-if="posts.length">
       <card-list :posts="posts" />
     </div>
@@ -45,6 +45,16 @@ export default {
       return new Date(b.date) - new Date(a.date);
     });
     return { posts }
+  },
+  data() {
+    return {
+      title: 'ブログ'
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+    }
   }
 }
 </script>

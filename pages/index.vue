@@ -530,6 +530,11 @@ export default {
     const query = await $content('works' || 'index').limit(3)
     const latestWorks = await query.fetch()
     return { latestWorks }
+  },
+  head() {
+    return {
+      titleTemplate: ''
+    }
   }
 }
 </script>

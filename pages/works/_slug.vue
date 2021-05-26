@@ -24,6 +24,11 @@ export default {
   async asyncData ({ $content, params }) {
     const work = await $content('works', params.slug || 'index').fetch()
     return { work }
+  },
+  head() {
+    return {
+      title: this.work.title,
+    }
   }
 }
 </script>

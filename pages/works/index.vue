@@ -1,6 +1,6 @@
 <template>
   <div class="works-wrapper">
-    <h1 class="page-title"><span class="marker">制作実績</span></h1>
+    <h1 class="page-title"><span class="marker">{{ title }}</span></h1>
     <ul class="works-type">
       <li class="works-type-item"><a href="#webdesign">Web制作<span class="arrow-bottom"></span></a></li>
       <li class="works-type-item"><a href="#others">印刷物・その他<span class="arrow-bottom"></span></a></li>
@@ -114,6 +114,16 @@ import WorkList from "~/components/WorkList.vue"
 
 export default {
   components: { WorkList }, //　これいらない？なくても動く
+  data() {
+    return {
+      title: '制作実績'
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+    }
+  },
   async asyncData ({ $content, params }) {
     const query = await $content('works' || 'index').limit(15)
     const allWorks = await query.fetch()
