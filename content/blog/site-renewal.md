@@ -2,7 +2,8 @@
 title: 'ポートフォリオサイトをリニューアルしました'
 date: 2021-04-18
 tags: [Nuxtjs,Vuejs]
-image: '/images/blog/blog_thumb.png'
+thumbnail: '/images/blog/thumbnails/portfolio_v2.jpg'
+image: '/images/blog/letters_sum.jpg'
 ---
 
 Nuxt/Contentを使って作り直しました。  

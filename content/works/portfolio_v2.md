@@ -2,7 +2,7 @@
 title: Webポートフォリオ ver.2.0「letters(仮名)」
 date: 2021-05-26
 tags: [design]
-image: '/images/works/behind_sum.jpg'
+image: '/images/works/letters_sum.jpg'
 ---
 
 ## 概要

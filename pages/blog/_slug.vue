@@ -110,7 +110,8 @@ export default {
 }
 
 .blog_post .back-link:hover {
-  color: skyblue;
+  color: #fff;
+  background-color: skyblue;
 }
 
 @media screen and (max-width: 780px) {

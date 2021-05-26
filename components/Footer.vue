@@ -7,6 +7,7 @@
 
 <style>
   footer {
+    line-height: 20px;
     background-color: #333;
   }
 

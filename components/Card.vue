@@ -1,7 +1,12 @@
 <template>
   <article class="card">
     <nuxt-link class="blog-slug" :to="{ name: 'blog-slug', params: { slug: slug } }">
-      <img :src="image">
+      <p class="blog-thumb" v-if="thumbnail" :key="slug">
+        <img :src="thumbnail">
+      </p>
+      <p class="blog-thumb" v-else>
+        <img src="/images/blog/blog_thumb.png">
+      </p>
       <div class="card-description">
         <h2 class="title">{{ title }}</h2>
         <time class="date" :datetime="date">{{ date | moment('YYYY.MM.DD') }}</time>
@@ -44,6 +49,9 @@ export default {
       type: String,
       required: true
     },
+    thumbnail: {
+      type: String
+    },
     image: {
       type: String
     }
@@ -61,6 +69,20 @@ export default {
 
   .card a {
     text-decoration: none;
+  }
+
+  .card .blog-thumb {
+    overflow: hidden;
+  }
+
+  .card .blog-thumb img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform .6s ease-in-out;
+  }
+
+  .card:hover .blog-thumb img {
+    transform: scale(1.08);
   }
 
   .card a:link, .card a:visited {

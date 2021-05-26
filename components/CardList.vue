@@ -9,6 +9,7 @@
       :date="post.date"
       :slug="post.slug"
       :key="post.slug"
+      :thumbnail="post.thumbnail"
       :image="post.image"
     />
   </div>

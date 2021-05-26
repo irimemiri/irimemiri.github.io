@@ -1,7 +1,7 @@
 <template>
   <div id="wrapper">
     <Header />
-    <Nuxt />
+    <Nuxt id="main_content" />
     <Footer />
   </div>
 </template>
@@ -38,6 +38,17 @@ html {
 ::selection {
   background: #bbc8e6;
   color: #fff;
+}
+
+#wrapper {
+  /* for fixed footer */
+  width: 100%;
+  position: relative;
+  min-height: 100%;
+}
+
+#main_content {
+  padding-bottom: 20px; /*フッターの高さ*/
 }
 
 /* #wrapper {
