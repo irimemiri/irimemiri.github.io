@@ -1,6 +1,6 @@
 ---
 title: Webポートフォリオ ver.1.0「behind」
-date: 2021-02-01
+date: 2021-02-31
 tags: [design]
 image: '/images/works/behind_sum.jpg'
 ---
