@@ -120,11 +120,11 @@ img {
 
 .site-title {
   position: absolute;
-  width: 600px;
+  width: 100%;
   z-index: 100;
   /* FIXME: 位置崩れやすい */
   bottom: 120px;
-  right: 20px;
+  text-align: center;
   color: #fff;
 }
 
@@ -135,7 +135,6 @@ img {
   font-size: 2em;
   line-height: 1.8;
   letter-spacing: .08em;
-  /* border: solid 5px #000; */
 }
 
 body {
@@ -144,7 +143,7 @@ body {
 }
 
 .sect-header {
-  width: 380px;
+  width: 100%;
   margin-bottom: 45px;
   display: flex;
   align-items: center;
@@ -154,7 +153,7 @@ body {
   content: "";
   display: block;
   height: 4px;
-  width: 80px;
+  width: 8.163%; /* 80/980 */
   background-color: #333;
   margin-right: 20px;
 }
@@ -258,11 +257,11 @@ body {
   padding-right: 20px; /*fixed*/
   padding-left: 20px; /*fixed*/
   margin-right: 10.204%; /* 100/980 */
-  border-bottom: solid 1px #000;
+  border-bottom: solid 1px #333;
 }
 
 .works-sect .works-link a:link, .works-sect .works-link a:visited {
-  color: #000;
+  color: #333;
 }
 
 .works-sect .works-link a:hover {
@@ -313,7 +312,7 @@ body {
   width: 7.916%; /* 38/480 */
   height: 2px;
   border-radius: 10px;
-  background-color: #000;
+  background-color: #333;
   margin-bottom: 28px;
 }
 
@@ -328,11 +327,11 @@ body {
   display: inline-block;
   padding-right: 20px;
   padding-left: 20px;
-  border-bottom: solid 1px #000;
+  border-bottom: solid 1px #333;
 }
 
 .profile-sect .profile-link a:link, .profile-sect .profile-link a:visited {
-  color: #000;
+  color: #333;
 }
 
 .profile-sect .profile-link a:hover {
@@ -363,10 +362,11 @@ body {
   line-height: 48px;
   text-decoration: none;
   font-weight: bold;
+  box-shadow: 0 0 10px #ccc;
 }
 
 .contact-sect .contact-link:link, .contact-sect .contact-link:visited {
-  color: #000;
+  color: #333;
 }
 
 .contact-sect .contact-link:hover {
@@ -415,7 +415,6 @@ body {
 @media screen and (max-width: 780px) {
   .site-title {
     /* FIXME: 位置崩れやすい */
-    /* width: 370px; */
     width: 96%; /* 370/375 edited */
     bottom: 60px;
     right: auto;
