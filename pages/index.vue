@@ -527,8 +527,11 @@ export default {
     }
   },
   async asyncData ({ $content, params }) {
-    const query = await $content('works' || 'index').limit(3)
-    const latestWorks = await query.fetch()
+    const query = await $content('works' || 'index')
+    const allWorks = await query.fetch()
+    const latestWorks = allWorks.sort(function (a, b) {
+      return new Date(b.date) - new Date(a.date)
+    }).slice(0,3);
     return { latestWorks }
   },
   head() {
