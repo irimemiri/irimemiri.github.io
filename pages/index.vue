@@ -416,7 +416,7 @@ body {
   .site-title {
     /* FIXME: 位置崩れやすい */
     width: 96%; /* 370/375 edited */
-    bottom: 60px;
+    bottom: 40px;
     right: auto;
     left: auto;
     text-align: center;

@@ -45,25 +45,25 @@
           <div class="skillset-row">
             <dt class="skill-type">Backend</dt>
             <dd class="skill-text">
-              Ruby/Ruby on Rails/PHP/CodeIgniter/Node.js
+              Ruby / Ruby on Rails / PHP / CodeIgniter / Node.js
             </dd>
           </div>
           <div class="skillset-row">
             <dt class="skill-type">Frontend</dt>
             <dd class="skill-text">
-              HTML5/CSS3/JavaScript/vue.js/jQuery
+              HTML5 / CSS3 / JavaScript / vue.js / jQuery
             </dd>
           </div>
           <div class="skillset-row">
             <dt class="skill-type">Design Tools</dt>
             <dd class="skill-text">
-              Sketch/Illustrator/Photoshop
+              Sketch / Illustrator / Photoshop
             </dd>
           </div>
           <div class="skillset-row">
             <dt class="skill-type">Other Tools</dt>
             <dd class="skill-text">
-              WordPress/Google Analytics/AWS
+              WordPress / Google Analytics / AWS
             </dd>
           </div>
         </dl>
