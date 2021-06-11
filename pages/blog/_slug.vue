@@ -96,6 +96,10 @@ export default {
   margin-bottom: 8px;
 }
 
+.blog_post .nuxt-content ol, .blog_post .nuxt-content ul {
+  padding-left: 1.8rem;
+}
+
 .blog_post .bottom-menu {
   text-align: center;
 }
