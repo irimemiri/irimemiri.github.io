@@ -36,6 +36,13 @@ export default {
     flex-wrap: wrap;
   }
 
+  .card_list::after {
+    /* 最後の行左詰めにするため */
+    display: block;
+    content:"";
+    width: 32%;
+  }
+
   .card {
     margin-bottom: 20px;
   }
