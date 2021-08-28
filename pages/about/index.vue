@@ -5,9 +5,9 @@
       <h2 class="sect-title">プロフィール</h2>
       <div class="sect-content">
         <p class="my-name">伊東絵美莉 (<a href="https://github.com/irimemiri" class="github-link">@irimemiri</a>)</p>
-        <p class="my-comment">1995年生まれ。大学在学中に大学生協の企画広報活動をしたことでPRや広告に興味を持ち、卒業後は広告系の会社にWebエンジニアとして就職。
-          2020年、退職をきっかけにデザインに興味を持ち、職業訓練校でWeb制作を3ヶ月間学びました。
-          何事も考え抜くタイプで、目的に合わせて色々な手段を試すことが好きです。趣味は絵を描くこと、音楽鑑賞、語学。</p>
+        <p class="my-comment">1995年生まれ。大学在学中に大学生協の企画広報活動をしたことでPRや広告に興味を持ち、卒業後は広告系の2社でWebエンジニアとして勤務。
+          2020年に退職後、職業訓練校でWebデザインを学び、ECサイト運営会社のWebデザイナーとして勤務。<br>
+          何事も考え抜くタイプで、目的に合わせて色々な手段を試すことが好きです。趣味は絵を描くこと、音楽を聴くこと、ゲームと語学。</p>
       </div>
     </section>
     <section class="sect-wrapper">
@@ -32,8 +32,12 @@
             </dd>
           </div>
           <div class="history-row">
-            <dt class="period">2021-現在</dt>
-            <dd class="event">デザイナーを目指して転職活動中</dd>
+            <dt class="period">2021.6-2021.8</dt>
+            <dd class="event">EC運営会社のWebデザイナー</dd>
+          </div>
+          <div class="history-row">
+            <dt class="period">2021.8-現在</dt>
+            <dd class="event">就職活動中</dd>
           </div>
         </dl>
       </div>
@@ -57,7 +61,7 @@
           <div class="skillset-row">
             <dt class="skill-type">Design Tools</dt>
             <dd class="skill-text">
-              Sketch / Illustrator / Photoshop
+              Illustrator / Photoshop
             </dd>
           </div>
           <div class="skillset-row">
