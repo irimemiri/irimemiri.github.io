@@ -1,8 +1,9 @@
 <template>
   <div id="wrapper">
-    <Header />
+    <Maintenance />
+    <!-- <Header />
     <Nuxt id="main_content" />
-    <Footer />
+    <Footer /> -->
   </div>
 </template>
 
