@@ -1,6 +1,6 @@
 <template>
   <div id="wrapper">
-    <!-- <Maintenance /> -->
+    <Loading />
     <Header />
     <Nuxt id="main_content" />
     <Footer />
@@ -8,7 +8,6 @@
 </template>
 
 <style>
-/* TODO: nuxt初期スタイル整理する */
 html {
   font-family:
     'Source Sans Pro',
@@ -43,13 +42,28 @@ html {
 
 #wrapper {
   /* for fixed footer */
-  width: 100%;
+  /* width: 100%;
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
+  overflow: hidden; */
 }
 
 #main_content {
-  padding-bottom: 40px; /*フッターの高さ*/
+  padding-top: 100px; /*ヘッダー分。仮*/
+  /* padding-bottom: 40px; フッターの高さ */
+}
+
+.body-class {
+  background-color: #000;
 }
 </style>
+
+<script>
+  export default {
+    head: {
+      bodyAttrs: {
+        class: 'body-class'
+      }
+    }
+  }
+</script>

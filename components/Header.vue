@@ -1,13 +1,20 @@
 <template>
   <header>
-    <div id="hamburger-bg"></div>
+    <nav id="g_nav">
+      <ul>
+        <li><nuxt-link to="/">Emiri Ito</nuxt-link></li>
+        <li><nuxt-link to="/about">Biography</nuxt-link></li>
+        <li><nuxt-link to="/about">Career</nuxt-link></li>
+      </ul>
+    </nav>
+    <!-- <div id="hamburger-bg"></div>
     <div id="hamburger" @click="activeMenu=!activeMenu">
       <span class="inner_line" id="line1" :class="{open:activeMenu}"></span>
       <span class="inner_line" id="line2" :class="{open:activeMenu}"></span>
       <span class="inner_line" id="line3" :class="{open:activeMenu}"></span>
-    </div>
+    </div> -->
 
-    <nav id="g_nav" :class="{open: activeMenu}">
+    <!-- <nav id="g_nav" :class="{open: activeMenu}">
       <ul>
         <li><nuxt-link to="/" @click.native="activeMenu=false">HOME</nuxt-link></li>
         <li><nuxt-link to="/works" @click.native="activeMenu=false">制作実績</nuxt-link></li>
@@ -15,7 +22,7 @@
         <li><nuxt-link to="/blog" @click.native="activeMenu=false">ブログ</nuxt-link></li>
       </ul>
     </nav>
-    <div id="nav_bg" :class="{active:activeMenu}" @click="activeMenu=false"></div>
+    <div id="nav_bg" :class="{active:activeMenu}" @click="activeMenu=false"></div> -->
   </header>
 </template>
 
@@ -100,57 +107,29 @@ header {
 }
 
 #g_nav{
+  width: 100%;
   position: absolute;
   top: 0;
-  right: -40%;
-  width: 40%;
-  height: 100vh;
-  background: #fff;
-  transition: .7s;
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
-}
-
-#g_nav.open {
-  right: 0px;
+  background: #000;
 }
 
 #g_nav ul{
-  padding-left: 25%;
-  padding-top: 80px;
+  display: flex;
 }
 
 #g_nav ul li {
   list-style-type: none;
-  font-size: 20px;
-  margin-bottom: 5%;
+  font-size: 16px;
+  color: #fff;
 }
 
 #g_nav a{
-  display: block;
+  /* display: block; */
   text-decoration: none;
-  color: #000000;
+  color: #fff;
   margin: 0 15px;
   padding: 10px;
   transition: .5s;
-}
-
-#nav_bg {
-  background-color: rgba(0,0,0,.6);
-  display: block;
-  height: 100%;
-  opacity: 0;
-  pointer-events: none;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: all 0.3s linear 0s;
-  width: 100%;
-  z-index: -1;
-}
-
-#nav_bg.active {
-  opacity: 1;
-  pointer-events: auto;
 }
 
 @media screen and (max-width: 780px) {
