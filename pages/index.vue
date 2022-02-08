@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    index
+    <div v-if="works.length">
+      <work-list :works="works" />
+    </div>
   </div>
 </template>
 
@@ -368,6 +370,8 @@ img {
 </style>
 
 <script>
+import WorkList from "~/components/WorkList.vue"
+
 export default {
   data() {
     return {
@@ -400,17 +404,12 @@ export default {
     }
   },
   async asyncData ({ $content, params }) {
-    const query = await $content('works' || 'index')
+    const query = await $content('works' || 'index').limit(15)
     const allWorks = await query.fetch()
-    const latestWorks = allWorks.sort(function (a, b) {
-      return new Date(b.date) - new Date(a.date)
-    }).slice(0,3);
-    return { latestWorks }
-  },
-  head() {
-    return {
-      titleTemplate: ''
-    }
+    const works = allWorks.sort(function (a, b) {
+      return new Date(b.date) - new Date(a.date);
+    });
+    return { works }
   }
 }
 </script>

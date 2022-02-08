@@ -1,15 +1,18 @@
 <template>
   <div id="wrapper">
-    <Loading />
+    <!-- <Loading /> -->
     <Header />
-    <Nuxt id="main_content" />
+    <Nuxt />
     <Footer />
   </div>
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
 html {
   font-family:
+    'Work Sans',  
     'Source Sans Pro',
     -apple-system,
     BlinkMacSystemFont,
@@ -40,21 +43,9 @@ html {
   color: #fff;
 }
 
-#wrapper {
-  /* for fixed footer */
-  /* width: 100%;
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden; */
-}
-
-#main_content {
-  padding-top: 100px; /*ヘッダー分。仮*/
-  /* padding-bottom: 40px; フッターの高さ */
-}
-
 .body-class {
   background-color: #000;
+  color: #fff;
 }
 </style>
 

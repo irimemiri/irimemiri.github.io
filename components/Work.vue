@@ -4,9 +4,9 @@
       <div class="work-card">
         <p class="work_key_img"><img :src="image"></p>
         <!-- <time class="date" :datetime="date">{{ date | moment('YYYY') }}</time> -->
-        <div class="mask">
+        <!-- <div class="mask">
           <h2 class="caption">{{ title }}</h2>
-        </div>
+        </div> -->
       </div>
     </nuxt-link>  
   </article>
@@ -52,13 +52,16 @@ export default {
   }
 
   .work-card .work_key_img img {
+    width: 420px;
+    height: 420px;
+    object-fit: cover;
     display: block;
     transition: transform .6s ease-in-out;
   }
 
-  .work-card:hover .work_key_img img {
+  /* .work-card:hover .work_key_img img {
     transform: scale(1.08);
-  }
+  } */
 
   .work-card {
     overflow: hidden;
@@ -66,7 +69,7 @@ export default {
     position: relative;
   }
 
-  .work-card .mask {
+  /* .work-card .mask {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -75,10 +78,10 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 2.564%; /* 20/780 */
+    padding: 20px 2.564%;
     text-align: center;
     transition: background-color .6s;
-  }
+  } */
 
   .work-card:hover .mask {
     background-color: rgba(0,0,0,.6);

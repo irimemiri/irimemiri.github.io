@@ -28,11 +28,17 @@ export default {
 </script>
 
 <style scoped>
+
+.works_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .works {
-  width: 79.591%; /* 780/980 */
+  width: 33%; /* 79.591%; 780/980 */
   margin-bottom: 40px;
-  margin-right: auto;
-  margin-left: auto;
+  /* margin-right: auto;
+  margin-left: auto; */
 }
 
 /*
