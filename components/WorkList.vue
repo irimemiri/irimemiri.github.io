@@ -32,27 +32,12 @@ export default {
 .works_list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .works {
-  width: 33%; /* 79.591%; 780/980 */
-  margin-bottom: 40px;
-  /* margin-right: auto;
-  margin-left: auto; */
+  width: 29%;
+  margin-bottom: 6.5%;
 }
 
-/*
-  ===========================
-  target size:
-  375px(750px)x677px(1334px);
-  ===========================
-*/ 
-
-@media screen and (max-width: 780px) {
-  .works {
-    /* 効いてない気がする */
-    /* width: 370px; */
-    width: 100%; /* 370/370 */
-  }
-}
 </style>>

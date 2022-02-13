@@ -39,13 +39,15 @@ html {
 }
 
 ::selection {
-  background: #bbc8e6;
-  color: #fff;
+  background: #fff100;
+  color: #000;
 }
 
 .body-class {
   background-color: #000;
   color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 </style>
 

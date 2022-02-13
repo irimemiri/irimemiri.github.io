@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p class="credit"><small class="copyright">&copy; irimemiri 2020.</small></p>
+    <p class="credit"><small class="copyright">&copy; irimemiri 2022.</small></p>
   </footer>
 </template>
 
@@ -8,7 +8,7 @@
   footer {
     line-height: 40px;
     width: 100%;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     right: 0;
   }
@@ -22,6 +22,6 @@
   }
 
   .copyright {
-    color: #999;
+    color: #333;
   }
 </style>

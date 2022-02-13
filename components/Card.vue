@@ -62,7 +62,7 @@ export default {
 <style scoped>
   .card {
     /* FIXME: ここに幅を書くのはおかしいと思う */
-    width: 32%;
+    width: 32.333%;
     display: block;
     background-color: #fff;
   }

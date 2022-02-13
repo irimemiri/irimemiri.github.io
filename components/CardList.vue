@@ -40,7 +40,7 @@ export default {
     /* 最後の行左詰めにするため */
     display: block;
     content:"";
-    width: 32%;
+    width: 32.333%;
   }
 
   .card {

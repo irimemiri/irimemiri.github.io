@@ -1,8 +1,8 @@
 <template>
   <article class="work">
     <nuxt-link class="works-slug" :to="{ name: 'works-slug', params: { slug: slug } }">
-      <div class="work-card">
-        <p class="work_key_img"><img :src="image"></p>
+      <div class="work-card" :style="{ backgroundImage: 'url(' + image + ')' }">
+        <!-- <p class="work_key_img"><img :src="image"></p> -->
         <!-- <time class="date" :datetime="date">{{ date | moment('YYYY') }}</time> -->
         <!-- <div class="mask">
           <h2 class="caption">{{ title }}</h2>
@@ -47,26 +47,18 @@ export default {
 </script>
 
 <style scoped>
-  .work_key_img {
-    width: 100%;
-  }
-
-  .work-card .work_key_img img {
-    width: 420px;
-    height: 420px;
-    object-fit: cover;
+  .work-card::before {
+    content: "";
     display: block;
-    transition: transform .6s ease-in-out;
+    padding-top: 100%;
   }
-
-  /* .work-card:hover .work_key_img img {
-    transform: scale(1.08);
-  } */
 
   .work-card {
-    overflow: hidden;
     width: 100%;
-    position: relative;
+   /* bindでbgimageつけてる */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   /* .work-card .mask {

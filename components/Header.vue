@@ -1,8 +1,8 @@
 <template>
   <header>
+    <nuxt-link exact to="/">Emiri Ito<span>portfolio</span></nuxt-link>
     <nav id="g_nav">
       <ul>
-        <li><nuxt-link exact to="/">Emiri Ito<span>portfolio</span></nuxt-link></li>
         <li><nuxt-link exact to="/bio">Biography</nuxt-link></li>
         <li><nuxt-link exact to="/career">Career</nuxt-link></li>
       </ul>
@@ -10,19 +10,22 @@
   </header>
 </template>
 
-<style>
+<style scoped>
 header {
-  position: fixed;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   top: 0;
   z-index: 1000;
-  width: 100%;
 }
 
 #g_nav{
-  width: 100%;
-  position: absolute;
-  top: 0;
-  /* background: #000; */
+  /* FIXME: fixedにすると右側(#g_nav)がはみ出るので確認してくれ */
+  /* position: absolute; */
+  /* top: 0; */
 }
 
 #g_nav ul{
@@ -31,7 +34,7 @@ header {
 
 #g_nav ul li {
   list-style-type: none;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 #g_nav a{
