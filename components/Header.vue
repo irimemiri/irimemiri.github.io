@@ -33,6 +33,8 @@ header {
 }
 
 #g_nav ul li {
+  width: 120px; /* TODO: もうちょっとちゃんと考える これは仮 幅固定 */
+  text-align: center;
   list-style-type: none;
   font-size: 1rem;
 }
@@ -41,7 +43,6 @@ header {
   text-decoration: none;
   color: #fff;
   margin: 0 auto;
-  padding: 10px;
   transition: .5s;
 }
 
