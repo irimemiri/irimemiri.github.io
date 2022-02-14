@@ -2,10 +2,10 @@
   <transition name="modal" appear>
     <div class="modal-overlay" @click="$emit('close')">
       <div class="modal-window" @click.stop>
+        <span class="modal-close-icon" @click="$emit('close')"></span>
         <p class="piece_eyecatch" v-if="image"><img :src="image" /></p>
         <p v-if="url" class="piece_link"><a :href="url">VISIT&nbsp;<i class="fas fa-external-link-alt"></i></a></p>
         <nuxt-content :document="val"/>
-        <button class="modal-close-btn" @click="$emit('close')">閉じる</button>
       </div>
     </div>
   </transition>
@@ -41,11 +41,30 @@
   padding: 100px;
 }
 
-.modal-close-btn {
+.modal-close-icon {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+ 
+.modal-close-icon::before, .modal-close-icon::after { /* 共通設定 */
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  width: 2px; /* 棒の幅（太さ） */
+  height: 30px; /* 棒の高さ */
+  border-radius: .5px;
+  background: #fff;
+}
+ 
+.modal-close-icon::before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+ 
+.modal-close-icon::after {
+  transform: translate(-50%,-50%) rotate(-45deg);
 }
 
 .modal-content {

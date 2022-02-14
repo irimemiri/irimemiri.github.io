@@ -1,7 +1,5 @@
 <template>
   <div id="wrapper">
-    <div class="cursor"></div>
-    <div class="follower"></div>
     <!-- <Loading /> -->
     <Header />
     <Nuxt />
@@ -58,44 +56,50 @@ html {
 }
 
  
-.cursor,
-.follower {
+#cursor,
+#stalker {
   border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0; 
   cursor: none;
   pointer-events: none;
 }
  
-.cursor {
+#cursor {
+  position: fixed;
+  top: -4px;
+  left: -4px;
   width: 8px;
   height: 8px;
-  background-color: #000;
+  background-color: yellow;
   z-index: 2001;
 }
  
-.follower {
+#stalker {
+  position: fixed;
+  top: -20px;
+  left: -20px;
   width: 40px;
   height: 40px;
-  background-color: #fdfe00;
+  background: rgba(255,255,255, .6);
+  transform: translate(0,0);
+  transition: transform 0.2s ease-out;
+  transition-timing-function: ease-out;
   z-index: 2000;
 }
 </style>
 <script>
   if (process.browser) {
-    // ここに window とか document を使った処理
-    var
-    cursor = document.getElementsByClassName("cursor")[0],
-    cWidth = 20, //カーソルの大きさ
-    mouseX = 0, //マウスのX座標
-    mouseY = 0; //マウスのY座標
+    const cursor = document.createElement('div');
+    cursor.id = 'cursor';
+    document.body.appendChild(cursor);
 
-    document.body.addEventListener('mousemove', function(e){
-      mouseX = e.pageX;
-      mouseY = e.pageY;
-      cursor.style.left = (mouseX - (cWidth / 2)) + 'px';
-      cursor.style.top = (mouseY - (cWidth / 2)) + 'px';
+    const stalker = document.createElement('div');
+    stalker.id = 'stalker';
+    document.body.appendChild(stalker);
+
+    //上記のdivタグをマウスに追従させる処理
+    document.addEventListener('mousemove', function (e) {
+      cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+      stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
     });
   }
 
