@@ -37,7 +37,7 @@
   position: relative;
   overflow-y: scroll;
   overflow-x: hidden;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.55);
   padding: 100px;
 }
 
@@ -111,6 +111,20 @@
   margin-top: 18px;
   margin-bottom: 8px;
 }
+
+.modal-window::-webkit-scrollbar {
+  /* width: 15px; */
+  display: none;
+}
+.modal-window::-webkit-scrollbar-track {
+  background: #666;
+  border-radius: 10px;
+}
+.modal-window::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
 </style>
 
 <script>
@@ -118,8 +132,8 @@
     name: 'Modal',
     props: {
       val: {
-        type: Object,
-        required: true
+        // type: Object,
+        required: false
       },
       image: {
         type: String,

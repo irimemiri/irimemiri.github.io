@@ -1,6 +1,8 @@
 <template>
   <div id="wrapper">
-    <!-- <Loading /> -->
+    <!-- <div id="cursor"></div>
+    <div id="stalker"></div> -->
+    <!-- <Loading :loading="loading" /> -->
     <Header />
     <Nuxt />
     <Footer />
@@ -47,7 +49,8 @@ html {
   background-color: #000;
   color: #fff;
   margin: 0 auto;
-  cursor: none;
+  /* TODO: マウスストーカー等実装ちゃんとできたら以下有効にする */
+  /* cursor: none; */
 }
 
 #wrapper {
@@ -69,45 +72,81 @@ html {
   left: -4px;
   width: 8px;
   height: 8px;
-  background-color: yellow;
+  background-color: rgb(255, 255, 1);
   z-index: 2001;
 }
  
 #stalker {
   position: fixed;
-  top: -20px;
-  left: -20px;
-  width: 40px;
-  height: 40px;
-  background: rgba(255,255,255, .6);
+  top: -15px;
+  left: -15px;
+  width: 30px;
+  height: 30px;
+  background: rgb(255, 255, 1);
+  opacity: .6;
+  mix-blend-mode:exclusion;
   transform: translate(0,0);
-  transition: transform 0.2s ease-out;
+  transition: width .2s, height .2s, background-color .2s, transform 0.2s ease-out;
   transition-timing-function: ease-out;
   z-index: 2000;
 }
+
+#stalker.hov {
+  top: -25px;
+  left: -25px;
+  width: 50px;
+  height: 50px;
+  background: rgba(33, 157, 221);
+}
+
 </style>
 <script>
-  if (process.browser) {
-    const cursor = document.createElement('div');
-    cursor.id = 'cursor';
-    document.body.appendChild(cursor);
-
-    const stalker = document.createElement('div');
-    stalker.id = 'stalker';
-    document.body.appendChild(stalker);
-
-    //上記のdivタグをマウスに追従させる処理
-    document.addEventListener('mousemove', function (e) {
-      cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
-      stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
-    });
-  }
+  import Loading from "~/components/Loading.vue"
+  import Header from "~/components/Header.vue"
+  import Footer from "~/components/Footer.vue"
 
   export default {
+    data() {
+      return {
+        loading: true
+      }
+    },
+    mounted() {
+      // setTimeout(() => {
+      //   this.loading = false;
+      // }, 1000);
+
+      // const cursor = document.getElementById('cursor');
+      // // const cursor = document.createElement('div');
+      // // cursor.id = 'cursor';
+      // // document.body.appendChild(cursor);
+
+      // const stalker = document.getElementById('stalker');
+      // // const stalker = document.createElement('div');
+      // // stalker.id = 'stalker';
+      // // document.body.appendChild(stalker);
+
+      // //上記のdivタグをマウスに追従させる処理
+      // document.addEventListener('mousemove', function (e) {
+      //   cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+      //   stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+      // });
+      // //リンクにホバー時はクラスをつける see@https://wemo.tech/3229
+      // const linkElem = document.querySelectorAll("a, div.works");
+      // for (let i = 0; i < linkElem.length; i++) {
+      //   linkElem[i].addEventListener('mouseover', function (e) {
+      //     stalker.classList.add('hov');
+      //   });
+      //   linkElem[i].addEventListener('mouseout', function (e) {
+      //     stalker.classList.remove('hov'); 
+      //   });
+      // }
+    },
     head: {
       bodyAttrs: {
         class: 'body-class'
       }
     }
   }
+
 </script>

@@ -4,8 +4,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "irimemiri's portfolio",
-    titleTemplate:  "%s - irimemiri's portfolio",
+    title: "Emiri Ito Web Portfolio",
+    titleTemplate:  "%s - Emiri Ito Web Portfolio",
     htmlAttrs: {
       lang: 'ja'
     },
@@ -68,9 +68,4 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
-
-  // // github pagesでデプロイするために追加
-  // router: {
-  //   base: '/irimemiri.github.io/'
-  // }
 }
