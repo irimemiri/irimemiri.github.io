@@ -2,14 +2,16 @@
   <transition name="modal" appear>
     <div class="modal-overlay">
       <div class="modal-window">
-        <p>ここにクリックした要素のアイテムを表示させる予定</p>
-        <button @click="$emit('close')">閉じる</button>
+        <nuxt-content :document="val"/>
+        <button class="modal-close-btn" @click="$emit('close')">閉じる</button>
       </div>
     </div>
   </transition>
 </template>
 
-<style scoped>
+<style>
+/* FIXME: scopedにするとnuxt-contentのスタイルがきれる */
+
 .modal-overlay {
   display: flex;
   align-items: center;
@@ -27,8 +29,18 @@
   height: 70%;
   width: 60%;
   border-radius: 30px;
-  overflow: hidden;
-  background-color: rgba(0,0,0,0.1);
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: rgba(0,0,0,0.8);
+  padding: 100px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .modal-content {
@@ -59,4 +71,27 @@
   opacity: 0;
   transform: translateY(-20px);
 }
+
+.modal-window .nuxt-content h2 {
+  font-size: 1.1em;
+  line-height: 60px;
+  margin-top: 10px;
+}
+
+.modal-window .nuxt-content h2:first-child {
+  margin-top: 30px;
+}
+
+.modal-window .nuxt-content h3 {
+  font-size: 1em;
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
 </style>
+
+<script>
+  export default {
+    name: 'Modal',
+    props: ['val'],
+  }
+</script>
