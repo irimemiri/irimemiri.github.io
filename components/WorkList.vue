@@ -9,7 +9,7 @@
         :slug="work.slug"
         :image="work.image"/>
     </div>
-    <modal v-show="showContent" :val="workItem" @close="closeModal"/>
+    <modal v-show="showContent" :val="workItem" :image="workItemImage" :url="workItemUrl" @close="closeModal"/>
   </div>
 </template>
 
@@ -25,7 +25,9 @@ export default {
   data() {
     return {
       showContent: false,
-      workItem: ""
+      workItem: "",
+      workItemImage: "",
+      workItemUrl: ""
     }
   },
   props: {
@@ -38,10 +40,18 @@ export default {
     openModal(work) {
       this.showContent = true;
       this.workItem = work;
+      this.workItemImage = work.image;
+      if(work.url) this.workItemUrl = work.url
+      if (process.browser) {
+        // ここに window とか document を使った処理
+        document.body.style.overflow = 'hidden';
+        document.body.style.paddingRight= '15px';
+      }
     },
     closeModal() {
-      console.log('押された---------');
-      console.log(this.showContent);
+      // FIXME: モーダル側が、消える最中に数px左にずれる
+      document.body.style.paddingRight= '';
+      document.body.style.overflow = 'auto';
       this.showContent = false;
     }
   }

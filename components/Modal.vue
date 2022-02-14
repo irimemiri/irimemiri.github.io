@@ -1,7 +1,9 @@
 <template>
   <transition name="modal" appear>
-    <div class="modal-overlay">
-      <div class="modal-window">
+    <div class="modal-overlay" @click="$emit('close')">
+      <div class="modal-window" @click.stop>
+        <p class="piece_eyecatch" v-if="image"><img :src="image" /></p>
+        <p v-if="url" class="piece_link"><a :href="url">VISIT&nbsp;<i class="fas fa-external-link-alt"></i></a></p>
         <nuxt-content :document="val"/>
         <button class="modal-close-btn" @click="$emit('close')">閉じる</button>
       </div>
@@ -23,12 +25,15 @@
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 
 .modal-window {
-  height: 70%;
+  height: 80%;
   width: 60%;
-  border-radius: 30px;
+  border-radius: 30px 0 30px 0;
+  border: solid 1px rgba(255, 255, 255, .6);
   position: relative;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -92,6 +97,19 @@
 <script>
   export default {
     name: 'Modal',
-    props: ['val'],
+    props: {
+      val: {
+        type: Object,
+        required: true
+      },
+      image: {
+        type: String,
+        required: true
+      },
+      url: {
+        type: String,
+        required: false
+      }
+    }
   }
 </script>
