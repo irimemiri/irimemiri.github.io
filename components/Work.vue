@@ -1,6 +1,6 @@
 <template>
   <article class="work">
-    <nuxt-link class="works-slug" :to="{ name: 'works-slug', params: { slug: slug } }">
+    <!-- <nuxt-link class="works-slug" :to="{ name: 'works-slug', params: { slug: slug } }"> -->
       <div class="work-card" :style="{ backgroundImage: 'url(' + image + ')' }">
         <!-- <p class="work_key_img"><img :src="image"></p> -->
         <!-- <time class="date" :datetime="date">{{ date | moment('YYYY') }}</time> -->
@@ -8,7 +8,10 @@
           <h2 class="caption">{{ title }}</h2>
         </div> -->
       </div>
-    </nuxt-link>  
+    <!-- </nuxt-link>   -->
+    <!-- TODO: 親子間での連携 see@https://shimablogs.com/vue-modal -->
+    <Modal v-if="modalFlag">
+    </Modal>
   </article>
 </template>
 
@@ -16,6 +19,11 @@
 import moment from 'moment';
 
 export default {
+  data() {
+    return {
+      modalFlag: false
+    }
+  },
   filters: {
       moment(value, format) {
       return moment(value).format(format);
@@ -42,6 +50,14 @@ export default {
       type: String,
       required: true
     }
+  // },
+  // methods: {
+  //   openModal: function() {
+  //     this.modalFlag = true;
+  //   },
+  //   closeModal: function() {
+  //     this.modalFlag = false;
+  //   }
   }
 }
 </script>

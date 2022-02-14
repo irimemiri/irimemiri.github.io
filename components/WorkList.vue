@@ -1,27 +1,62 @@
 <template>
   <div class="works_list">
-    <work
+      <div class="works" v-for="work in works" @click="openModal(work)" :key="work.slug">
+        <work 
+          :title="work.title"
+          :body="work.body"
+          :tags="work.tags"
+          :date="work.date"
+          :slug="work.slug"
+          :image="work.image"/>
+      </div>
+      <!-- 下記だとイベントが上手く動かない -->
+    <!-- <work
       class="works"
       v-for="work in works"
+      @click="openModal(work)"
       :title="work.title"
+      :body="work.body"
       :tags="work.tags"
       :date="work.date"
       :slug="work.slug"
       :key="work.slug"
       :image="work.image"
-    />
+    /> -->
+    <p style="font-color: #fff;" @click="openModal(showContent)">{{showContent}}</p>
+    <modal v-show="showContent" :val="workItem" @close="closeModal"/>
   </div>
 </template>
 
 <script>
-import Work from "~/components/Work"
+import Work from "~/components/Work.vue"
+import Modal from "~/components/Modal.vue"
 
 export default {
-  components: { Work },
+  components: {
+    Work,
+    Modal
+  },
+  data() {
+    return {
+      showContent: false,
+      workItem: ""
+    }
+  },
   props: {
     works: {
       type: Array,
       required: true
+    }
+  },
+  methods: {
+    openModal(work) {
+      this.showContent = true;
+      this.workItem = work;
+    },
+    closeModal() {
+      console.log('押された---------');
+      console.log(this.showContent);
+      this.showContent = false;
     }
   }
 }

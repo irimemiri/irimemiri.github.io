@@ -18,7 +18,7 @@ img {
 }
 
 /* for fade-in */
-.fadein {
+/* .fadein {
   opacity: 0;
   transform: translateY(10px);
   transition: 1.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -34,7 +34,7 @@ img {
 
 .fadein.policy3 {
   transition-delay: 1000ms;
-}
+} */
 
 @keyframes text-in {
   0% {
@@ -79,8 +79,7 @@ export default {
           el: '.swiper-pagination',
           clickable: true
         }
-      },
-      text: "irimemiri's web portfolio"
+      }
     }
   },
   methods: {
