@@ -5,10 +5,6 @@ tags: [design]
 image: '/images/works/letters_sum.jpg'
 ---
 
-## 概要
-
-ポートフォリオ2作目、今アクセスいただいているこのサイトです。  
-  
 SPAに興味があったのでVue.js/Nuxt.jsの勉強も兼ねて制作しました。  
 Nuxt.jsで作り、Github Pagesでホスティングしています。  
 <br>

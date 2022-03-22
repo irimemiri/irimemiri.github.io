@@ -38,14 +38,18 @@
   overflow-y: scroll;
   overflow-x: hidden;
   background-color: rgba(0,0,0,0.55);
-  padding: 100px;
+  padding: 80px;
 }
 
 .modal-close-icon {
-  display: inline-block;
-  position: relative;
+  display: block;
+  position: fixed;
   width: 30px;
   height: 30px;
+  top: auto;
+  right: auto;
+  margin-right: -50px;
+  margin-top: -50px; 
 }
  
 .modal-close-icon::before, .modal-close-icon::after { /* 共通設定 */

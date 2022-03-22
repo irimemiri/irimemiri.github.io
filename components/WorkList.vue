@@ -1,6 +1,6 @@
 <template>
   <div class="works_list">
-    <div class="works" v-for="work in works" @click="openModal(work)" :key="work.slug">
+    <div :class="{'works': true, 'is-hover': isHover}" v-for="work in works" @click="openModal(work)" @mouseover="handleMouseOver(work)" @mouseleave="handleMouseLeave()" :key="work.slug">
       <work 
         :title="work.title"
         :body="work.body"
@@ -27,7 +27,8 @@ export default {
       showContent: false,
       workItem: "",
       workItemImage: "",
-      workItemUrl: ""
+      workItemUrl: "",
+      isHover: false
     }
   },
   props: {
@@ -53,6 +54,15 @@ export default {
       document.body.style.paddingRight= '';
       document.body.style.overflow = 'auto';
       this.showContent = false;
+    },
+    handleMouseOver(hoverItem) {
+      // item全部にノイズを加える
+      this.isHover = true;
+      // ホバー中のitemだけノイズ対象から除外する
+      // -> 多分おかしいけどcss川の:hoverでやってみる
+    },
+    handleMouseLeave() {
+      this.isHover = false;
     }
   }
 }
@@ -69,6 +79,14 @@ export default {
 .works {
   width: 29%;
   margin-bottom: 6.5%;
+}
+
+.works.is-hover {
+  opacity: 0.2;
+}
+
+.works.is-hover:hover {
+  opacity: 1;
 }
 
 </style>>
